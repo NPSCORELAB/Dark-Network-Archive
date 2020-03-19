@@ -12,7 +12,7 @@
 theme = "minimal"
 
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -22,7 +22,7 @@ font = ""
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
-font_size = "L"
+font_size = "M"
 
 ############################
 ## Basic Info
@@ -44,11 +44,11 @@ local_business_type = ""
 org_name = "CORE Lab"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+description = "he CORE Lab’s mission is to serve as a leading DOD organization in providing research and education to U.S. and foreign military officers in advanced methodologies and cutting-edge, analytic technologies. The Lab focuses on, but is not limited to, social media, social network, geospatial, temporal, and textual analyses as well as system dynamics. We seek to enable academics, students, and operational practitioners to collect, manage, and fuse data to create a more complete picture of the common operational environment. Our niche is bridging the gap between theory and operational capability."
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-# logo = "core-logo.png"
+logo = "icon.png"
 
 ############################
 ## Site Features
@@ -86,7 +86,7 @@ edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", repo_branch 
 
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "corelab@nps.edu"
-phone = ""
+phone = "(831) 656-2932"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
@@ -121,7 +121,7 @@ contact_links = [
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = ""
+sharing_image = "avatar.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = "NPS_CORELab"
@@ -149,10 +149,10 @@ list_delimiter = ", "
 gravatar = false
 
 # Align the main menu to the right of the page? (true/false)
-menu_align_right = false
+menu_align_right = true
 
 # Show estimated reading time for posts? (true/false)
-reading_time = true
+reading_time = false
 
 # Display next/previous section pager? (true/false)
 section_pager = false

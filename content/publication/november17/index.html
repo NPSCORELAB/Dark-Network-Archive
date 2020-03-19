@@ -1,0 +1,125 @@
+---
+title: "November17"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[Wikipedia](https://en.wikipedia.org/wiki/Revolutionary_Organization_17_November#/media/File:Revolutionary_Organization_17_November.jpg)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "Commonly when working with large social networks, data collection is limited by resources, time, and accessibility to the network leading connections to be missed.  As demonstrated in the article, Inferring missing links in partially observed social networks authored by CJ Rhodes and P Jones, it is possible to infer social network topology following a limited observation of a large network, despite data collection constraints.  Inferences can be made to determine where previously unconnected individuals are likely to fit, thereby attempting to predict network growth as new people are considered for inclusion.  The structure of a covert network or one that is actively trying to remain undetected can be even more difficult to ascertain.  However, as with the case of the 17 November Revolutionary Organization (N17), a militant Marxist urban guerrilla organization in Greece, it can be very useful to understand the likelihood that individuals are connected despite limited or no evidence of a link. The missing-links in the N17 network were reconstructed using a statistical procedure based on Bayes' Theorem, using data derived from open-source reporting between 1975 to 2002, a time period in which the group was responsible for several violent acts such as assassinations, kidnappings, and symbolic attacks on government offices. The Bayesian approach used in this study determined the probability of an interaction between individuals based on a sample of their known relationships to other N17 associates when examined against their known relationships, role within the group, membership to factions, access to resources necessary to conduct group operations, and centrality (or importance) to the N17 network.  The results of the statistical analysis captures a predictive estimate of the possibility of connections between individuals that were not initially detected during the initial network sampling.  To increase confidence in the inference method, the study repeated the analysis on several other independent network samples drawn from the N17 data, ultimately exhibiting that there is a 50% probability that these predicted links are correct."
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Using data observed from open source publications, the authors derived network data on the social network of the Greek terrorist group November17 (N17). The present data set represents a reconstruction of the data presented in the original paper, Inferring missing links in partially observed social network, put together by the UCINET team. The data refers to a specific temporal window which runs from 1975 to 2002, and represents 22 members N17 with data derived from open-source reporting. The data set codes relationships between 22 members of N17, each tie is coded as ‘1’. The data set includes three attributes of the 22 members of N17, which include: role, faction, and resources. Role is coded with ‘1’ denoting giving orders, and ‘2’ denoting a person who recieves orders. Both faction and resources are coded from 1 to 3. Attributes for factions are coded as: ‘1’ representing the 1st Generation Leadership Faction, ‘2’ representing the Koufontinas Faction, ‘3’ representing the Sardanopoulos Faction. Resources attributes are coded as: ‘1’ for controlling one resource, ‘2’ for controlling two resources, and ‘3’ for controlling three resources.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>Commonly when working with large social networks, data collection is limited by resources, time, and accessibility to the network leading connections to be missed. As demonstrated in the article, Inferring missing links in partially observed social networks authored by CJ Rhodes and P Jones, it is possible to infer social network topology following a limited observation of a large network, despite data collection constraints. Inferences can be made to determine where previously unconnected individuals are likely to fit, thereby attempting to predict network growth as new people are considered for inclusion. The structure of a covert network or one that is actively trying to remain undetected can be even more difficult to ascertain. However, as with the case of the 17 November Revolutionary Organization (N17), a militant Marxist urban guerrilla organization in Greece, it can be very useful to understand the likelihood that individuals are connected despite limited or no evidence of a link. The missing-links in the N17 network were reconstructed using a statistical procedure based on Bayes’ Theorem, using data derived from open-source reporting between 1975 to 2002, a time period in which the group was responsible for several violent acts such as assassinations, kidnappings, and symbolic attacks on government offices. The Bayesian approach used in this study determined the probability of an interaction between individuals based on a sample of their known relationships to other N17 associates when examined against their known relationships, role within the group, membership to factions, access to resources necessary to conduct group operations, and centrality (or importance) to the N17 network. The results of the statistical analysis captures a predictive estimate of the possibility of connections between individuals that were not initially detected during the initial network sampling. To increase confidence in the inference method, the study repeated the analysis on several other independent network samples drawn from the N17 data, ultimately exhibiting that there is a 50% probability that these predicted links are correct.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">connection</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">Relations indicate that open source reporting has demonstrated some connection between the two individuals at some point in the past.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>Rhodes C, Jones P (2009). “Inferring Missing Links in Partially
+Observed Social Networks.” <em>Journal of the Operational Research
+Society</em>, <em>60</em>, 1373-1383.</p>
+</div>

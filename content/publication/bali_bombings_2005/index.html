@@ -1,0 +1,140 @@
+---
+title: "Bali bombings 2005, Indonesia"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[Wikipedia](https://en.wikipedia.org/wiki/2005_Bali_bombings#/media/File:Kuta_200507-2.jpg)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "This data depicts the network of indiduals involved in the 2005 Bali bombings in the Kuta tourist district of Bali, Indonesia. This incident was perpetrated by Jemaah Islamiyah and al-Qaeda and claimed the lives of 23 people- including the bombers, and injuring more than 100. The suicide bombings occured at the the Raja’s Resturant at the Kuta Square shopping mall in central Kuta, and another two bombs detonated along the Jimbaran beach, one of which was near the Four Seasons Hotel- a location popular with Western tourists.  Three more undetonated bombs were found in Jimbaran.  Of the 23 killed, 19 Australians, 8 South Koreans, 6 Americans, 4 Japanese, 3 Canadians, and 1 Briton were killed.  Jemaah Islamiyah, a violent Islamic extremist group in Southeast Asia, has been attributed to the attacks.  The group also has ties to Al-Qaeda. Motivations for the attack are suggested to be associated with start of Ramadan, the Muslim holy month, and the upcoming third anniversary of the 2002 Bali bombing. This is the third of a series of terrorist bombings targeting Australians and Westerners in Bali, Indonesia. The authors of this dataset, JJATT, gathered this data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes over time."
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>These data were made available through the John Jay &amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2005 Bali bombings in Bali, Indonesia. The undirected network is composed of 27 individuals and their evolving relationships and legal status over periods of time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006). As such, this series is useful for exploring compositional network changes in a terrorist network over time. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>This data depicts the network of indiduals involved in the 2005 Bali bombings in the Kuta tourist district of Bali, Indonesia. This incident was perpetrated by Jemaah Islamiyah and al-Qaeda and claimed the lives of 23 people- including the bombers, and injuring more than 100. The suicide bombings occured at the the Raja’s Resturant at the Kuta Square shopping mall in central Kuta, and another two bombs detonated along the Jimbaran beach, one of which was near the Four Seasons Hotel- a location popular with Western tourists. Three more undetonated bombs were found in Jimbaran. Of the 23 killed, 19 Australians, 8 South Koreans, 6 Americans, 4 Japanese, 3 Canadians, and 1 Briton were killed. Jemaah Islamiyah, a violent Islamic extremist group in Southeast Asia, has been attributed to the attacks. The group also has ties to Al-Qaeda. Motivations for the attack are suggested to be associated with start of Ramadan, the Muslim holy month, and the upcoming third anniversary of the 2002 Bali bombing. This is the third of a series of terrorist bombings targeting Australians and Westerners in Bali, Indonesia. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes over time.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acquaintances/Distant familiy ties</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Acquaintances/Distant family ties (interactions limited to radical organization activities)</td>
+</tr>
+<tr class="even">
+<td align="left">Friends/Moderately close family ties</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).</td>
+</tr>
+<tr class="odd">
+<td align="left">Close Friends/Family</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Close Friends/Family, Tight-knit operational cliques (would die for each other</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>(????). “Bali bombings 2002, Indonesia.” &lt;URL:
+<a href="http://doitapps.jjay.cuny.edu/jjatt/data.php" class="uri">http://doitapps.jjay.cuny.edu/jjatt/data.php</a>&gt;. Accessed: 2019-11-11.</p>
+</div>

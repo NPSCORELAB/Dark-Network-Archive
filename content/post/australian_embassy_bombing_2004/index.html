@@ -1,0 +1,140 @@
+---
+title: "Australian Embassy Bombing 2004, Indonesia"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:2004_Australian_embassy_bombing_in_Jakarta#/media/File:Aus_Emb_bomb2.png)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "These data depict the network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This incident was perpetrated by Jemaah Islamiyah, a terrorist organization linked to the 2002 Bali bombing, and claimed the lives of 9 people while injuring 150 others. The authors of these dataset, JJATT, gathered these data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as subject to changes over time. The terrorist group, Jemaah Islamiyah, is a Southeast Asian militant extremist Islamist rebel group with ties to Al-Qaeda, that has committed numerous violent acts dedicated to the creation of an Islamic state in Southeast Asia.  The group has cells in Indonesia, Singapore, Malaysia, and the Philippines, but remains particularly active in Indonesia where they maintain a public website.  The September 9th, 2004 suicide bombing of the Australian embassy resulted in the deaths of 9 individuals, with all Australians being reported alive.  Motivations for the September 9th, 2004 bombing of the Australian embassy are unclear, but possibly linked to the upcoming Indonesian presidential elections and/or the upcoming Australian elections, or the desired release of Abu Bakar Bashir, the spiritual leader of Jemaah Islamiyah. This was the third major attack targeting Australians in Indonesia, following the 2002 Bali bombing and 2003 Marriott Hotel bombing in Jakarta- both of which Jemaah Islamiyah has been suspected of orchestrating. "
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>These data were made available through the John Jay &amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This undirected network is composed of 25 individuals and their relationships and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>These data depict the network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This incident was perpetrated by Jemaah Islamiyah, a terrorist organization linked to the 2002 Bali bombing, and claimed the lives of 9 people while injuring 150 others. The authors of these dataset, JJATT, gathered these data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as subject to changes over time. The terrorist group, Jemaah Islamiyah, is a Southeast Asian militant extremist Islamist rebel group with ties to Al-Qaeda, that has committed numerous violent acts dedicated to the creation of an Islamic state in Southeast Asia. The group has cells in Indonesia, Singapore, Malaysia, and the Philippines, but remains particularly active in Indonesia where they maintain a public website. The September 9th, 2004 suicide bombing of the Australian embassy resulted in the deaths of 9 individuals, with all Australians being reported alive. Motivations for the September 9th, 2004 bombing of the Australian embassy are unclear, but possibly linked to the upcoming Indonesian presidential elections and/or the upcoming Australian elections, or the desired release of Abu Bakar Bashir, the spiritual leader of Jemaah Islamiyah. This was the third major attack targeting Australians in Indonesia, following the 2002 Bali bombing and 2003 Marriott Hotel bombing in Jakarta- both of which Jemaah Islamiyah has been suspected of orchestrating.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acquaintances/Distant familiy ties</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Acquaintances/Distant family ties (interactions limited to radical organization activities)</td>
+</tr>
+<tr class="even">
+<td align="left">Friends/Moderately close family ties</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).</td>
+</tr>
+<tr class="odd">
+<td align="left">Close Friends/Family</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Close Friends/Family, Tight-knit operational cliques (would die for each other</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/australian_embassy_bombing_2004/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/australian_embassy_bombing_2004/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/australian_embassy_bombing_2004/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>(????). “Australian Embassy Bombing 2004, Indonesia.” &lt;URL:
+<a href="http://doitapps.jjay.cuny.edu/jjatt/data.php" class="uri">http://doitapps.jjay.cuny.edu/jjatt/data.php</a>&gt;. Accessed: 2019-11-11.</p>
+</div>

@@ -1,0 +1,130 @@
+---
+title: "Death Eaters"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[Wikipedia](https://en.wikipedia.org/wiki/Death_Eater#/media/File:DeathEaters.jpg)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- trust
+- strong ties
+- centrality
+- network topography
+summary: "Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, 'Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom' (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two 'dark networks' in the story, Dumbledore's Army and Voldemort's Death Eaters struggling for power.  As corresponding with this data set, Voldemort's Death Eaters are a nefarious group that struggles to control the wizarding world through fear and terror, demanding unwavering legance to Voldemort and the Dark Arts, or use of dark magic.  Both networks are evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another.  The authors analyzed Voldemort's Death Eaters by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort's Death Eaters, who were examined in the same way.  The research concludes Voldemort's Death Eaters network is built on fear rather than trust, and far more fragmented than Dumbledore's Army- with Voldemort taking on an abnormally central role in the network that is ultimately detrimental to the resilience of the network, precluding to the fate of the Death Eaters during the final battle. "
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This data set was used in the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom.’ (Everton, Everton, Green, Homblin, Schroeder, 2019), and draws from J.K. Rowling’s seven Harry Potter books and other open-source data to code Voldemort’s Death Eaters as an undirected network. Consisting of 25 members (26 with the inclusion of Severus Snape) and 128 ties representing Death Eaters their loyalty to Voldemort. Coded by tie strength between members of each network on a scale from 0 to 5, where ‘0’ indicates the absence of a tie, with the rest of the ties being determined by the author’s judgement of loyalty- most ties have been assigned a tie strength of 2, a small number receiving a tie strength of 4 and 5. If a relationship between Death Eaters was unclear, the authors inferred relationships by participation in key activities and events.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom’ (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two ‘dark networks’ in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power. As corresponding with this data set, Voldemort’s Death Eaters are a nefarious group that struggles to control the wizarding world through fear and terror, demanding unwavering legance to Voldemort and the Dark Arts, or use of dark magic. Both networks are evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another. The authors analyzed Voldemort’s Death Eaters by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way. The research concludes Voldemort’s Death Eaters network is built on fear rather than trust, and far more fragmented than Dumbledore’s Army- with Voldemort taking on an abnormally central role in the network that is ultimately detrimental to the resilience of the network, precluding to the fate of the Death Eaters during the final battle.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">mutual understanding and trust</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">Undirected weighted relationship between two actors. The authors coded tie strength on a scale from 0 to 5, where ‘0’ indicates the absece of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/harry_potter_death_eaters/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/harry_potter_death_eaters/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/harry_potter_death_eaters/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>Everton S, Everton T, Green A, Hamblin C, Schroeder R (2019). “Strong
+Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and
+Bellatrix (and Lucius) Might Be More Important than Harry and Tom.”
+&lt;URL: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503" class="uri">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503</a>&gt;.
+Online; accessed 16 September 2019.</p>
+</div>

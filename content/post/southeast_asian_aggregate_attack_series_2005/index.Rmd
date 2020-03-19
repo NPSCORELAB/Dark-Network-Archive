@@ -1,0 +1,243 @@
+---
+title: "Southeast Asian Aggregate Attack Series 2005, Indonesia"
+publishDate: "`r Sys.Date()`"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[DNI](https://www.dni.gov/nctc/groups/ji.html)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "This network depicts a the ties between individuals associated with Jemaah Islamiyah and involed in one of the following events: Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005.  Jemaah Islamiyah (JI) is a militant extremist Islamist group that aims to establish an Islamic state in Southeast Asia that has ties to Al-Qaeda.  JI has roots in Darul Islam, a radical Islamist/anti-colonialist movement in Indonesia in the 1940s.  The authors of this dataset, JJATT, gathered this data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes."
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+options(warn = 2) # FAIL ON ANY WARNINGS
+
+`%>%` <- magrittr::`%>%`
+```
+
+```{r}
+proto_net <- COREnets::get_data("southeast_asian_aggregate_attack_series_2005")
+# g <- COREnets::core_as_igraph(proto_net)
+
+build_net <- function(edge_table, node_table,
+                      edge_class, directed) {
+  target_edges <- edge_table[
+    edge_table$edge_class == edge_class, 
+  ]
+  if (!nrow(target_edges)) {
+    stop("The `edge_class` in `proto_net$reference$codebook` doesn't have any rows.")
+  }
+  target_nodes <- node_table[
+    node_table$name %in% c(target_edges$from, target_edges$to), 
+  ]
+  igraph::graph_from_data_frame(
+    d = target_edges,
+    directed = directed,
+    vertices = target_nodes
+  )
+}
+
+build_nets <- function(proto_net) {
+  templates <- split(proto_net$reference$codebook, 
+                    seq_len(nrow(proto_net$reference$codebook)))
+  names(templates) <- proto_net$reference$codebook$edge_class
+
+  lapply(templates, function(.x) {
+    build_net(edge_table = proto_net$network$edges_table, 
+              node_table = proto_net$network$nodes_table,
+              edge_class = .x$edge_class,
+              directed = .x$is_directed)
+  })
+}
+
+g <- build_nets(proto_net)
+```
+
+
+# Introduction
+
+```{r, results='asis'}
+cat(proto_net$reference$description)
+```
+
+# Abstract
+
+```{r, results='asis'}
+cat(proto_net$reference$abstract)
+```
+
+# Code Book
+
+
+```{r}
+knitr::kable(proto_net$reference$codebook)
+```
+
+
+# Sociogram
+
+
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+
+
+```{r, out.width = '100%', fig.height = 9}
+build_vis_net <- function(g, title) {
+  dat <- visNetwork::toVisNetworkData(g)
+  
+  visNetwork::visNetwork(nodes = dat$nodes, edges = dat$edges,
+                         main = title,
+                         height = 800,
+                         width = 680) %>% 
+    visNetwork::visIgraphLayout(layout = "layout_with_kk",
+                                randomSeed = 831) %>% 
+    # visNetwork::visIgraphLayout(layout = "layout.norm",
+                                # layoutMatrix = coords) %>% 
+    visNetwork::visNodes(
+      color = list(highlight.border = "black"),
+      shadow = list(enabled = TRUE, size = 5)
+    ) %>%
+    visNetwork::visOptions(
+      highlightNearest = list(enabled = TRUE,
+                              degree = 1,
+                              hover = TRUE),
+      nodesIdSelection = list(
+        enabled = TRUE,
+        style = "font-size: 15px"
+      )
+    )
+}
+
+
+# full_g <- igraph::graph_from_data_frame(
+#   d = proto_net$network$edges_table,
+#   vertices = proto_net$network$nodes_table
+# )
+
+# vis_coords <- igraph::layout_with_kk(full_g)
+
+vis_nets <- purrr::imap(g, build_vis_net)
+
+temp_dir <- tempdir(check = TRUE)
+
+for (i in seq_along(vis_nets)) {
+ htmlwidgets::saveWidget(
+   vis_nets[[i]],
+   file = sprintf("%s/Southeast Asian Aggregate Attack Series 2005, Indonesia%s.html", temp_dir, i)
+  )
+}
+
+vis_paths <- dir(temp_dir, pattern = "Southeast Asian Aggregate Attack Series 2005, Indonesia\\d+\\.html$",
+                 full.names = TRUE)
+for_slick <- purrr::map_chr(vis_paths, readr::read_file)
+
+unlink(temp_dir, force = TRUE)
+
+slick <- slickR::slickR(for_slick, slideType = "iframe",
+       height = 900, width = 720) +
+  slickR::settings(dots = TRUE, autoplay = FALSE, #TRUE,
+                   lazyLoad = "ondemand")
+
+widgetframe::frameWidget(slick, width = "100%"#, width = 700
+                         )
+```
+
+
+
+<br><br><br><br>
+
+# Get the Data
+
+## Tables
+
+### Nodes
+
+```{r}
+proto_net$network$nodes_table %>% 
+  tibble::as_tibble() %>%
+  DT::datatable(
+    rownames = FALSE,
+    filter="top",
+    extensions = "Buttons",
+    options = list(
+      dom = "Bfrtip",
+      buttons = list(
+        "copy", "print",
+        list(extend = "csv", filename = glue::glue("{proto_net$network$nodes_table}_nodes")),
+        list(extend = "excel", filename = glue::glue("{proto_net$network$nodes_table}_nodes"))
+      ),
+      pageLength = 10,
+      scrollX = TRUE
+    )
+  ) %>%
+  widgetframe::frameWidget(height = "auto")
+```
+
+
+### Edges
+
+
+```{r}
+proto_net$network$edges_table %>% 
+  tibble::as_tibble() %>%
+  dplyr::rename(source = from, target = to) %>%
+  DT::datatable(
+    rownames = FALSE,
+    filter="top",
+    extensions = "Buttons",
+    options = list(
+      dom = "Bfrtip",
+      buttons = list(
+        "copy", "print",
+        list(extend = "csv", filename = glue::glue("{proto_net$network$edge_table}_edges")),
+        list(extend = "excel", filename = glue::glue("{proto_net$network$edge_table}_edges"))
+      ),
+      pageLength = 10,
+      scrollX = TRUE
+    )
+  ) %>%
+  widgetframe::frameWidget(height = "auto")
+```
+
+
+# Citation
+
+
+```{r, results='asis'}
+proto_net$reference$bibtex
+```
+
+
+
+

@@ -1,0 +1,124 @@
+---
+title: "FIFA"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[FIFA](https://external-preview.redd.it/-mq6B0cL4Y9ZnNhXZ2pMSr8JUIwyWnjI8P4M0iv0nE4.jpg?auto=webp&s=f4ad537dfeb55b1857bb6afdd6eb2bde01cd1a2a)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- fifa
+summary: "These data were reconstructed by Gemma Edwards using FIFA's Committee 2006 activity report. Each actor was tied to a standing committee in a bimodal network. The data procurred from UCINET's site (https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/fifa) stored these networks as one-mode graphs in which actors (people) are inteconnected via 'co-membership' ties."
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Two networks at different times, 2006 and 2015, of FIFA Standing Committee membership. This dataset was procurred from UCINET’s site and is described as ‘overt networks with covert elements’. The initial data was reconstructed by Gemma Edwards using FIFA’s Committee 2006 activity report. This data consists of 710 nodes in an directed network that represents joint memebrship of a standing committee.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>These data were reconstructed by Gemma Edwards using FIFA’s Committee 2006 activity report. Each actor was tied to a standing committee in a bimodal network. The data procurred from UCINET’s site (<a href="https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/fifa" class="uri">https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/fifa</a>) stored these networks as one-mode graphs in which actors (people) are inteconnected via ‘co-membership’ ties.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">co-membership</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Undirected binary ties representing joint membership on a standing committee.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/fifa/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/fifa/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/fifa/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>Edwards G (2016). “FIFA.” data retrieved from UCINET Software,<br />
+urlhttps://sites.google.com/site/ucinetsoftware/datasets/covert-networks/fifa.</p>
+</div>

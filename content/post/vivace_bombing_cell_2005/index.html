@@ -1,0 +1,132 @@
+---
+title: "Vivace Bombing Cell 2005, London"
+publishDate: "2020-03-18"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "The network data depict a group of individuals associated with four attempted bomb attacks on July 21, 2005 that paralyzed London's mass transportation system- targeting Shepherd's Bush, Warren Street, and Oval stations on the London Underground, and on the London Buses on route 26 in Bethnal Green on Hackney Road. Operation Vivace offers clear insight into the role of mosques in radicalization (Herrington, 2015). This failed incident resulted in the arrest and prosecution of the would be bombers, which yielded a great deal of information on the cell's activities.  The failed attacks have been claimed by a group Abu Hafs al-Masri Brigade, named after one of Osama bin Laden's lieutenants who was killed in 2001- but the legitimacy of this is disputed. The authors of these dataset, JJATT, gathered this data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes."
+---
+
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#code-book">Code Book</a></li>
+<li><a href="#sociogram">Sociogram</a></li>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#edges">Edges</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This data were made available through the John Jay &amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a network of individuals involved in the failed bombining attacks that paralyzed London’s mass transportation system on July 21, 2005. The dynamic network accounts for evolving relationships ammong individuals involved in this terrorist cell. This undirected network is composed of 5 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.</p>
+</div>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>The network data depict a group of individuals associated with four attempted bomb attacks on July 21, 2005 that paralyzed London’s mass transportation system- targeting Shepherd’s Bush, Warren Street, and Oval stations on the London Underground, and on the London Buses on route 26 in Bethnal Green on Hackney Road. Operation Vivace offers clear insight into the role of mosques in radicalization (Herrington, 2015). This failed incident resulted in the arrest and prosecution of the would be bombers, which yielded a great deal of information on the cell’s activities. The failed attacks have been claimed by a group Abu Hafs al-Masri Brigade, named after one of Osama bin Laden’s lieutenants who was killed in 2001- but the legitimacy of this is disputed. The authors of these dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.</p>
+</div>
+<div id="code-book" class="section level1">
+<h1>Code Book</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">edge_class</th>
+<th align="left">is_bimodal</th>
+<th align="left">is_directed</th>
+<th align="left">is_dynamic</th>
+<th align="left">is_weighted</th>
+<th align="left">definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Friends/Moderately close family ties</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).</td>
+</tr>
+<tr class="even">
+<td align="left">Close Friends/Family</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="left">Close Friends/Family, Tight-knit operational cliques (would die for each other</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sociogram" class="section level1">
+<h1>Sociogram</h1>
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p><br><br><br><br></p>
+</div>
+<div id="get-the-data" class="section level1">
+<h1>Get the Data</h1>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<div id="nodes" class="section level3">
+<h3>Nodes</h3>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="edges" class="section level3">
+<h3>Edges</h3>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"url":"/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>(????). “Vivace Bombing Cell 2005, London.” &lt;URL:
+<a href="http://doitapps.jjay.cuny.edu/jjatt/data.php" class="uri">http://doitapps.jjay.cuny.edu/jjatt/data.php</a>&gt;. Accessed: 2019-11-11.</p>
+</div>

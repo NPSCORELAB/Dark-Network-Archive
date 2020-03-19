@@ -1,11 +1,11 @@
 ---
 authors:
 - admin
-email: ""
-name: CORE Lab
+email: "corelab@nps.edu"
+name: "Dark Network Archive"
 organizations:
-- name: Defense Analysis Department, Naval Postgraduate School
-  url: ""
+- name: CORE Lab, Naval Postgraduate School
+  url: "https://nps.edu/web/core"
 social:
 - icon: envelope
   icon_pack: fas

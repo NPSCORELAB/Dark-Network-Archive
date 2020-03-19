@@ -1,0 +1,243 @@
+---
+title: "Australian Embassy Bombing 2004, Indonesia"
+publishDate: "`r Sys.Date()`"
+output: 
+  blogdown::html_page:
+    toc: true
+featured: true
+editor_options: 
+  chunk_output_type: console
+image:
+  caption: "[Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:2004_Australian_embassy_bombing_in_Jakarta#/media/File:Aus_Emb_bomb2.png)"
+  focal_point: ""
+  preview_only: false
+tags: 
+- terrorism
+summary: "These data depict the network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This incident was perpetrated by Jemaah Islamiyah, a terrorist organization linked to the 2002 Bali bombing, and claimed the lives of 9 people while injuring 150 others. The authors of these dataset, JJATT, gathered these data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as subject to changes over time. The terrorist group, Jemaah Islamiyah, is a Southeast Asian militant extremist Islamist rebel group with ties to Al-Qaeda, that has committed numerous violent acts dedicated to the creation of an Islamic state in Southeast Asia.  The group has cells in Indonesia, Singapore, Malaysia, and the Philippines, but remains particularly active in Indonesia where they maintain a public website.  The September 9th, 2004 suicide bombing of the Australian embassy resulted in the deaths of 9 individuals, with all Australians being reported alive.  Motivations for the September 9th, 2004 bombing of the Australian embassy are unclear, but possibly linked to the upcoming Indonesian presidential elections and/or the upcoming Australian elections, or the desired release of Abu Bakar Bashir, the spiritual leader of Jemaah Islamiyah. This was the third major attack targeting Australians in Indonesia, following the 2002 Bali bombing and 2003 Marriott Hotel bombing in Jakarta- both of which Jemaah Islamiyah has been suspected of orchestrating. "
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+options(warn = 2) # FAIL ON ANY WARNINGS
+
+`%>%` <- magrittr::`%>%`
+```
+
+```{r}
+proto_net <- COREnets::get_data("australian_embassy_bombing_2004")
+# g <- COREnets::core_as_igraph(proto_net)
+
+build_net <- function(edge_table, node_table,
+                      edge_class, directed) {
+  target_edges <- edge_table[
+    edge_table$edge_class == edge_class, 
+  ]
+  if (!nrow(target_edges)) {
+    stop("The `edge_class` in `proto_net$reference$codebook` doesn't have any rows.")
+  }
+  target_nodes <- node_table[
+    node_table$name %in% c(target_edges$from, target_edges$to), 
+  ]
+  igraph::graph_from_data_frame(
+    d = target_edges,
+    directed = directed,
+    vertices = target_nodes
+  )
+}
+
+build_nets <- function(proto_net) {
+  templates <- split(proto_net$reference$codebook, 
+                    seq_len(nrow(proto_net$reference$codebook)))
+  names(templates) <- proto_net$reference$codebook$edge_class
+
+  lapply(templates, function(.x) {
+    build_net(edge_table = proto_net$network$edges_table, 
+              node_table = proto_net$network$nodes_table,
+              edge_class = .x$edge_class,
+              directed = .x$is_directed)
+  })
+}
+
+g <- build_nets(proto_net)
+```
+
+
+# Introduction
+
+```{r, results='asis'}
+cat(proto_net$reference$description)
+```
+
+# Abstract
+
+```{r, results='asis'}
+cat(proto_net$reference$abstract)
+```
+
+# Code Book
+
+
+```{r}
+knitr::kable(proto_net$reference$codebook)
+```
+
+
+# Sociogram
+
+
+<!-- ```{r, out.width='100%', fig.height=9} -->
+<!-- g %>%  -->
+<!--   visNetwork::visIgraph() %>%  -->
+<!--   visNetwork::visIgraphLayout(layout = "layout_with_kk", randomSeed = 831) %>%  -->
+<!--   visNetwork::visNodes( -->
+<!--     color = list(highlight.border = "black"),  -->
+<!--     shadow = list(enabled = TRUE, size = 5) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visOptions( -->
+<!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), -->
+<!--     # selectedBy = list( -->
+<!--     #   variable = "group", -->
+<!--     #   style = "font-size: 15px" -->
+<!--     # ), -->
+<!--     nodesIdSelection = list( -->
+<!--       enabled = TRUE, -->
+<!--       style = "font-size: 15px" -->
+<!--     ) -->
+<!--   ) %>%  -->
+<!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
+<!--   visNetwork::visExport(name = proto_net$reference$name) -->
+<!-- ``` -->
+
+
+```{r, out.width = '100%', fig.height = 9}
+build_vis_net <- function(g, title) {
+  dat <- visNetwork::toVisNetworkData(g)
+  
+  visNetwork::visNetwork(nodes = dat$nodes, edges = dat$edges,
+                         main = title,
+                         height = 800,
+                         width = 680) %>% 
+    visNetwork::visIgraphLayout(layout = "layout_with_kk",
+                                randomSeed = 831) %>% 
+    # visNetwork::visIgraphLayout(layout = "layout.norm",
+                                # layoutMatrix = coords) %>% 
+    visNetwork::visNodes(
+      color = list(highlight.border = "black"),
+      shadow = list(enabled = TRUE, size = 5)
+    ) %>%
+    visNetwork::visOptions(
+      highlightNearest = list(enabled = TRUE,
+                              degree = 1,
+                              hover = TRUE),
+      nodesIdSelection = list(
+        enabled = TRUE,
+        style = "font-size: 15px"
+      )
+    )
+}
+
+
+# full_g <- igraph::graph_from_data_frame(
+#   d = proto_net$network$edges_table,
+#   vertices = proto_net$network$nodes_table
+# )
+
+# vis_coords <- igraph::layout_with_kk(full_g)
+
+vis_nets <- purrr::imap(g, build_vis_net)
+
+temp_dir <- tempdir(check = TRUE)
+
+for (i in seq_along(vis_nets)) {
+ htmlwidgets::saveWidget(
+   vis_nets[[i]],
+   file = sprintf("%s/Australian Embassy Bombing 2004, Indonesia%s.html", temp_dir, i)
+  )
+}
+
+vis_paths <- dir(temp_dir, pattern = "Australian Embassy Bombing 2004, Indonesia\\d+\\.html$",
+                 full.names = TRUE)
+for_slick <- purrr::map_chr(vis_paths, readr::read_file)
+
+unlink(temp_dir, force = TRUE)
+
+slick <- slickR::slickR(for_slick, slideType = "iframe",
+       height = 900, width = 720) +
+  slickR::settings(dots = TRUE, autoplay = FALSE, #TRUE,
+                   lazyLoad = "ondemand")
+
+widgetframe::frameWidget(slick, width = "100%"#, width = 700
+                         )
+```
+
+
+
+<br><br><br><br>
+
+# Get the Data
+
+## Tables
+
+### Nodes
+
+```{r}
+proto_net$network$nodes_table %>% 
+  tibble::as_tibble() %>%
+  DT::datatable(
+    rownames = FALSE,
+    filter="top",
+    extensions = "Buttons",
+    options = list(
+      dom = "Bfrtip",
+      buttons = list(
+        "copy", "print",
+        list(extend = "csv", filename = glue::glue("{proto_net$network$nodes_table}_nodes")),
+        list(extend = "excel", filename = glue::glue("{proto_net$network$nodes_table}_nodes"))
+      ),
+      pageLength = 10,
+      scrollX = TRUE
+    )
+  ) %>%
+  widgetframe::frameWidget(height = "auto")
+```
+
+
+### Edges
+
+
+```{r}
+proto_net$network$edges_table %>% 
+  tibble::as_tibble() %>%
+  dplyr::rename(source = from, target = to) %>%
+  DT::datatable(
+    rownames = FALSE,
+    filter="top",
+    extensions = "Buttons",
+    options = list(
+      dom = "Bfrtip",
+      buttons = list(
+        "copy", "print",
+        list(extend = "csv", filename = glue::glue("{proto_net$network$edge_table}_edges")),
+        list(extend = "excel", filename = glue::glue("{proto_net$network$edge_table}_edges"))
+      ),
+      pageLength = 10,
+      scrollX = TRUE
+    )
+  ) %>%
+  widgetframe::frameWidget(height = "auto")
+```
+
+
+# Citation
+
+
+```{r, results='asis'}
+proto_net$reference$bibtex
+```
+
+
+
+

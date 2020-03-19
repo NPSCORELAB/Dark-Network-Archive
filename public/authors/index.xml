@@ -7,29 +7,10 @@
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>/img/avatar.png</url>
       <title>Authors</title>
       <link>/authors/</link>
     </image>
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;Researchers have increasingly turned to social network analysis (SNA) for gaining greater understanding of “dark networks,” that is, covert and illegal networks, such as terrorist groups and criminal gangs, which seek to conceal their activities from authorities.&lt;/p&gt;
-&lt;p&gt;Unfortunately, because data on dark networks is somewhat limited and often anecdotal, it is difficult to evaluate the various theories that researchers, academics, and subject matter experts have developed about what makes some dark networks successful and what the best intervention strategies are for disrupting them.&lt;/p&gt;
-&lt;p&gt;The only way to resolve these differences is for analysts to compare and contrast dark networks across time and space; only then can they identify those characteristics (e.g., level of centralization, cohesion) that tend to be associated with successful dark networks and those associated with unsuccessful ones. That is where the CORE Lab’s Dark Network Archive (CORE DNA) comes in.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Robert Ford</title>
-      <link>/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/authors/robert-ford/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
