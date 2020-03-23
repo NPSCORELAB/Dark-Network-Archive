@@ -16,7 +16,7 @@ tags:
 - strong ties
 - centrality
 - network topography
-summary: "Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, 'Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom' (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two 'dark networks' in the story, Dumbledore's Army and Voldemort's Death Eaters struggling for power.  As corresponding with this data set, Voldemort's Death Eaters are a nefarious group that struggles to control the wizarding world through fear and terror, demanding unwavering legance to Voldemort and the Dark Arts, or use of dark magic.  Both networks are evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another.  The authors analyzed Voldemort's Death Eaters by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort's Death Eaters, who were examined in the same way.  The research concludes Voldemort's Death Eaters network is built on fear rather than trust, and far more fragmented than Dumbledore's Army- with Voldemort taking on an abnormally central role in the network that is ultimately detrimental to the resilience of the network, precluding to the fate of the Death Eaters during the final battle. "
+summary: "Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, 'Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom' (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two 'dark networks' in the story, Dumbledore's Army and Voldemort's Death Eaters struggling for power.  As corresponding with this data set, Voldemort's Death Eaters are a nefarious group that struggles to control the wizarding world through fear and terror, demanding unwavering legance to Voldemort and the Dark Arts, or use of dark magic.  Both networks are evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another.  The authors analyzed Voldemort's Death Eaters by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort's Death Eaters, who were examined in the same way.  The research concludes Voldemort's Death Eaters network is built on fear rather than trust, and far more fragmented than Dumbledore's Army- with Voldemort taking on an abnormally central role in the network that is ultimately detrimental to the resilience of the network, precluding to the fate of the Death Eaters during the final battle."
 ---
 
 
@@ -38,12 +38,11 @@ build_net <- function(edge_table, node_table,
   target_edges <- edge_table[
     edge_table$edge_class == edge_class, 
   ]
-  if (!nrow(target_edges)) {
-    stop("The `edge_class` in `proto_net$reference$codebook` doesn't have any rows.")
-  }
+  
   target_nodes <- node_table[
     node_table$name %in% c(target_edges$from, target_edges$to), 
   ]
+  
   igraph::graph_from_data_frame(
     d = target_edges,
     directed = directed,
@@ -115,7 +114,7 @@ knitr::kable(proto_net$reference$codebook)
 <!-- ``` -->
 
 
-```{r, out.width = '100%', fig.height = 9}
+```{r, out.width='100%', fig.height=9}
 build_vis_net <- function(g, title) {
   dat <- visNetwork::toVisNetworkData(g)
   
@@ -125,8 +124,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -139,7 +136,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -168,12 +166,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = FALSE, #TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = "100%"#, width = 700
-                         )
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 
