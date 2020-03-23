@@ -8,12 +8,12 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: "[Wikipedia](https://en.wikipedia.org/wiki/%C5%BBegota#/media/File:Zegota(Rada_Pomocy_Zydom)1946.jpg)"
   focal_point: ""
   preview_only: false
 tags: 
 - resistance group
-summary: "From 1942 to 1945, Zegota served as an underground organization of Polish resistance in German-occupied Poland. While, the individual organizations that make up this network were developed to provide security, gather food, coordinate excapes, rescue children, provide education, and counter anti-Jewish propaganda to name a few, until the formation of Zegota in 1942 none served to aid Jews. The authors of this research focused on how Zegota synchronized the efforts of multiple organizations to achieve a particular goal."
+summary: "From 1942 to 1945, Zegota served as an underground organization of Polish resistance in German-occupied Poland (1942-1945). The authors explore how Zegota, an underground organization, served as a synchronizing element in this broader network. Specifically, the ability to 'galvanize conditional actors to lead, manage and fascilitate a collection of networks toward a unified objective'. While, the individual organizations that make up this network were developed to provide security, gather food, coordinate excapes, rescue children, provide education, and counter anti-Jewish propaganda to name a few, until the formation of Zegota in 1942 none served to aid Jews. The authors of this research focused on how Zegota synchronized the efforts of multiple organizations to achieve a particular goal."
 ---
 
 
@@ -121,8 +121,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -135,7 +133,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -164,11 +163,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

@@ -1,6 +1,6 @@
 ---
 title: "The Noordin Top Terrorist Network"
-publishDate: "2019-12-14"
+publishDate: "2020-03-22"
 output: 
   blogdown::html_page:
     toc: true
@@ -8,16 +8,17 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: "[Researchgate](https://www.researchgate.net/publication/266465594_Tracking_destabilizing_and_disrupting_dark_networks_with_social_network_analysis_Dark_Networks_Course_Manual/figures?lo=1)"
   focal_point: ""
   preview_only: false
 tags: 
 - jihad
 - religious terrorism
 - suicide bombings
-summary: "These data were drawn primarily from two International Crisis Group (ICG) reports: “Terrorism in Indonesia: Noordin’s Networks” (International Crisis Group, 2006) and “Indonesia: Noordin Top’s Support Base” (International Crisis Group, 2009). The two ICG reports on Noordin contain rich one- and two-mode data on a variety of relations and affiliations (friendship, kinship, meetings, etc.) along with significant attribute data (education, group membership, physical status, etc.). The data were initially structured and analyzed by Naval Postgraduate School students in the course “Tracking and Disrupting Dark Networks” under the direction of Professor Sean Everton, Co-Director of the CORE Lab and Professor Nancy Roberts and then expanded and cleaned by Associate Faculty for Instruction, Dan Cunningham. "
+summary: "Social network analysis can be used in a variety of ways to combat dark network, as used in 'Strategies for Combating Dark Networks' by Nancy Roberts and Sean Everton, kinetic and non-kinetic approaches can be used to disrupt and counter dark networks such as terrorist operations.  Kinetic approaches involve 'aggressive and offensive measures to eliminate or capture network members, and their supporters,' (Roberts, Everton, 2012), while non-kinetic measures involve 'the use of subtle, non-coercive means for combating dark networks,'. Roberst and Everton use network data from Noordin Top’s South East Asian terror network to demonstrate the effectiveness of both strategies. By using topographical social network analysis metrics, the authors discerned the ability to weaken a dark network through two kinetic strategies: targeting and capacity building, and four non-kinetic approaches: institution-building, psychological operations, information operations, and rehabilitation.  Although distinct approaches, using all six approaches is recommended to create a well-rounded counter-approach to extremism, while also paying attention to the different levels of node analysis- at the individual and organization level.   "
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
@@ -28,8 +29,10 @@ summary: "These data were drawn primarily from two International Crisis Group (I
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#code-book">Code Book</a></li>
 <li><a href="#sociogram">Sociogram</a></li>
-<li><a href="#get-the-data">Get the Data</a><ul>
-<li><a href="#tables">Tables</a><ul>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
 <li><a href="#nodes">Nodes</a></li>
 <li><a href="#edges">Edges</a></li>
 </ul></li>
@@ -40,11 +43,11 @@ summary: "These data were drawn primarily from two International Crisis Group (I
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>These data were drawn primarily from ‘Terrorism in Indonesia: Noordin’s Networks,’ a publication of the International Crisis Group (2006) and include relational data on the 79 individuals listed in Appendix C of that publication.</p>
+<p>These data were drawn primarily from ‘Terrorism in Indonesia: Noordin’s Networks,’ a publication of the International Crisis Group (2006) and include relational data on the 79 individuals listed in Appendix C of that publication. The data represents 288 individuals in the Noordin Top terrorist network, originally constructed by Naval Postgraduate School students as part of the course ‘Tracking and Disrupting Dark Networks’, and reviewed by CORE Lab Research Assistant Daniel Cunningham. The data represents information regarding the relationships between group members, where members had been educated, if members had been classmates, communication ties, kinship ties, training events that members had been a part of, business and finances that members had been involved in, operational ties, friendship ties, religious affiliation, if members had been soulmates, logistical locations, recorded meetings, and individual attributes (including leducation, nationality, previous military training, etc.).</p>
 </div>
 <div id="abstract" class="section level1">
 <h1>Abstract</h1>
-<p>These data were drawn primarily from two International Crisis Group (ICG) reports: “Terrorism in Indonesia: Noordin’s Networks” (International Crisis Group, 2006) and “Indonesia: Noordin Top’s Support Base” (International Crisis Group, 2009). The two ICG reports on Noordin contain rich one- and two-mode data on a variety of relations and affiliations (friendship, kinship, meetings, etc.) along with significant attribute data (education, group membership, physical status, etc.). The data were initially structured and analyzed by Naval Postgraduate School students in the course “Tracking and Disrupting Dark Networks” under the direction of Professor Sean Everton, Co-Director of the CORE Lab and Professor Nancy Roberts and then expanded and cleaned by Associate Faculty for Instruction, Dan Cunningham.</p>
+<p>Social network analysis can be used in a variety of ways to combat dark network, as used in ‘Strategies for Combating Dark Networks’ by Nancy Roberts and Sean Everton, kinetic and non-kinetic approaches can be used to disrupt and counter dark networks such as terrorist operations. Kinetic approaches involve ‘aggressive and offensive measures to eliminate or capture network members, and their supporters,’ (Roberts, Everton, 2012), while non-kinetic measures involve ‘the use of subtle, non-coercive means for combating dark networks,’. Roberst and Everton use network data from Noordin Top’s South East Asian terror network to demonstrate the effectiveness of both strategies. By using topographical social network analysis metrics, the authors discerned the ability to weaken a dark network through two kinetic strategies: targeting and capacity building, and four non-kinetic approaches: institution-building, psychological operations, information operations, and rehabilitation. Although distinct approaches, using all six approaches is recommended to create a well-rounded counter-approach to extremism, while also paying attention to the different levels of node analysis- at the individual and organization level.</p>
 </div>
 <div id="code-book" class="section level1">
 <h1>Code Book</h1>
@@ -199,7 +202,7 @@ summary: "These data were drawn primarily from two International Crisis Group (I
 <!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
 <!--   visNetwork::visExport(name = proto_net$reference$name) -->
 <!-- ``` -->
-<div id="htmlwidget-1" style="width:720px;height:864px;" class="widgetframe html-widget"></div>
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/noordin_139/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <p><br><br><br><br></p>
 </div>

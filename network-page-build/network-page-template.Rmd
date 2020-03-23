@@ -8,7 +8,7 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: "{{{REFERNCE}}}"
   focal_point: ""
   preview_only: false
 tags: "{{{TAGS}}}"
@@ -120,8 +120,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -134,7 +132,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -163,11 +162,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

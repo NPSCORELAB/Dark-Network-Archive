@@ -5,7 +5,7 @@
     <link>/tags/strong-ties/</link>
       <atom:link href="/tags/strong-ties/index.xml" rel="self" type="application/rss+xml" />
     <description>strong ties</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/avatar.png</url>
       <title>strong ties</title>
@@ -15,11 +15,10 @@
     <item>
       <title>Death Eaters</title>
       <link>/post/harry_potter_death_eaters/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/harry_potter_death_eaters/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
@@ -116,6 +115,123 @@
 &lt;h3&gt;Edges&lt;/h3&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_death_eaters/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Everton S, Everton T, Green A, Hamblin C, Schroeder R (2019). “Strong
+Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and
+Bellatrix (and Lucius) Might Be More Important than Harry and Tom.”
+&amp;lt;URL: &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503&#34; class=&#34;uri&#34;&gt;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503&lt;/a&gt;&amp;gt;.
+Online; accessed 16 September 2019.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dumbledore&#39;s Army</title>
+      <link>/post/harry_potter_dumbledores_army/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/harry_potter_dumbledores_army/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This data set was used in the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom’ (Everton, Everton, Green, Homblin, Schroeder, 2019), and draws from J.K. Rowling’s seven Harry Potter books and other open-source data to code Dumbledore’s Army as a network. Consisting of 29 members, Dumbledore’s Army’s undirected network of 282 ties represent trust and mutual understanding by each individual, being coded by tie strength between members of each network on a scale from 0 to 5, where ‘0’ indicates the absence of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom’ (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power. As corresponding with this data set, Dumbledore’s Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort’s Death Eaters terrorizing the wizarding world. The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another. The authors analyzed Dumbledore’s Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way. The research concludes that Dumbledore’s Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort’s Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mutual understanding and trust&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Undirected weighted relationship between two actors. The authors coded tie strength on a scale from 0 to 5, where ‘0’ indicates the absece of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -234,120 +350,6 @@ Online; accessed 16 September 2019.&lt;/p&gt;
 &lt;h3&gt;Edges&lt;/h3&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_death_eaters/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;Everton S, Everton T, Green A, Hamblin C, Schroeder R (2019). “Strong
-Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and
-Bellatrix (and Lucius) Might Be More Important than Harry and Tom.”
-&amp;lt;URL: &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503&#34; class=&#34;uri&#34;&gt;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3389503&lt;/a&gt;&amp;gt;.
-Online; accessed 16 September 2019.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Dumbledore&#39;s Army</title>
-      <link>/post/harry_potter_dumbledores_army/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/harry_potter_dumbledores_army/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;This data set was used in the article, Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom (Everton, Everton, Green, Homblin, Schroeder, 2019), and draws from J.K. Rowling’s seven Harry Potter books and other open-source data to code Dumbledore’s Army as a network. Consisting of 29 members, Dumbledore’s Army’s undirected network of 282 ties represent trust and mutual understanding by each individual, being coded by tie strength between members of each network on a scale from 0 to 5, where ‘0’ indicates the absence of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power. As corresponding with this data set, Dumbledore’s Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort’s Death Eaters terrorizing the wizarding world. The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another. The authors analyzed Dumbledore’s Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way. The research concludes that Dumbledore’s Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort’s Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;mutual understanding and trust&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Undirected weighted relationship between two actors. The authors coded tie strength on a scale from 0 to 5, where ‘0’ indicates the absece of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:720px;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

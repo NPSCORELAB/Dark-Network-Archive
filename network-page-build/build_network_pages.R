@@ -36,6 +36,15 @@ build_network_pages <- function(proto_net_names) {
       image_target_path <- paste0(out_dir, "/featured.jpg")
       download.file(image_url, destfile = image_target_path, mode = "wb")
     }
+    
+    image_url_reference <- sprintf(
+      "https://raw.githubusercontent.com/NPSCORELAB/dna-pics/master/urls/%s",
+      target_nets[[i]]
+      )
+    image_reference <- ifelse(RCurl::url.exists(image_url_reference),
+                              readLines(image_url_reference,
+                                        warn = FALSE),
+                              "")
 
     out_path <- paste0(out_dir, "/", "index.Rmd")
 
@@ -69,6 +78,10 @@ build_network_pages <- function(proto_net_names) {
       rmd, '"{{{TAGS}}}"', 
       paste0("\n- ", this_net$reference$tags, collapse = "")
     )
+    rmd <- .gsub(
+      rmd, '{{{REFERNCE}}}',
+      image_reference
+    )
 
     readr::write_file(rmd, out_path)
   }
@@ -87,10 +100,10 @@ build_network_pages <- function(proto_net_names) {
 # build_network_pages("noordin_139")
 
 
-all <- setdiff(COREnets::list_data_sources(),
-               c("fifa", "paul_revere"))
+# all <- setdiff(COREnets::list_data_sources(),
+#                c("fifa", "paul_revere"))
 
 build_network_pages(
-  all
+  COREnets::list_data_sources()
 )
 

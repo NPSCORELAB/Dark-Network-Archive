@@ -8,13 +8,13 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: ""
   focal_point: ""
   preview_only: false
 tags: 
 - drug traffickers
 - criminal network
-summary: "Project Ciel is based on a small drug-importation network that was importing liquid hashish from Jamaica to Montreal. This network was targeted by the Royal Canadian Mounted Police and the Montreal Police from May 1996 to June 1997. Typical of many Canadian investigations of drug smuggling and trafficking, the operations in Project Ciel were described as taking place within a tightly governed organizational framework—a hierarchy, in short. Reports from the investigation maintained that the main target of the investigation was the “organizational leader.” Other key targets included the leader’s “lieutenant” and a series of other subordinates. The investigation produced three separate seizures, with two taking place at Mirabel airport near Montreal and another occurring at Sangster airport in Jamaica. Overall, 75 people fell into the surveillance net. A selection process that was aimed at identifying only those individuals who were active in the drug-importation operations resulted in a final network of 25 participants."
+summary: "Project Ciel is based on a small drug-importation network that was importing liquid hashish from Jamaica to Montreal. This network was targeted by the Royal Canadian Mounted Police and the Montreal Police from May 1996 to June 1997, with the main target of the investigation being the 'organizational leader'.  Other key targets include the leader's 'lieutenant', and lower level mid-management individuals. The investigation produced three separate seizures, with two taking place at Mirabel airport near Montreal and another occurring at Sangster airport in Jamaica. Using law enforcement data, primarily collected through electronic and physical surveillance records, Carlo Morselli, author of the book Inside Criminal Networks, evaluated the network using popular centrality measures to identify and understand how this dark network was centered around key participants.  The Ciel network was identified as being a tightly controlled organization with a relatively traditional hierarchy structure, with the ring leader distancing themself from the operation, delegating day-to-day operations to a 'lieutenant' who controlled lower level drug mules.  Morselli primarily uses centralization and centrality measures (in particular, degree centrality and betweenness centrality) to explain the role of indirect and direct centrality to a network, and it's correlation to operational vulnerability and the desire to mitigate risks within the organization even when not directly involved with the actions of subordinate members of the group."
 ---
 
 
@@ -122,8 +122,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -136,7 +134,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -165,11 +164,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

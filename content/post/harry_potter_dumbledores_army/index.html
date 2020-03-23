@@ -1,6 +1,6 @@
 ---
 title: "Dumbledore's Army"
-publishDate: "2019-12-14"
+publishDate: "2020-03-22"
 output: 
   blogdown::html_page:
     toc: true
@@ -8,7 +8,7 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: "[Wikipedia](https://en.wikipedia.org/wiki/Dumbledore%27s_Army#/media/File:Harrypotter5-roomofrequirement.jpg)"
   focal_point: ""
   preview_only: false
 tags: 
@@ -16,9 +16,10 @@ tags:
 - strong ties
 - centrality
 - network topography
-summary: "Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power.  As corresponding with this data set, Dumbledore’s Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort’s Death Eaters terrorizing the wizarding world.  The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another.  The authors analyzed Dumbledore’s Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way.  The research concludes that Dumbledore’s Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort’s Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network."
+summary: "Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, 'Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom' (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore's Army and Voldemort's Death Eaters struggling for power.  As corresponding with this data set, Dumbledore's Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort's Death Eaters terrorizing the wizarding world.  The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another.  The authors analyzed Dumbledore's Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort's Death Eaters, who were examined in the same way.  The research concludes that Dumbledore's Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort's Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network."
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
@@ -29,8 +30,10 @@ summary: "Network analysis has been recognized with increased frequency as a use
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#code-book">Code Book</a></li>
 <li><a href="#sociogram">Sociogram</a></li>
-<li><a href="#get-the-data">Get the Data</a><ul>
-<li><a href="#tables">Tables</a><ul>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
 <li><a href="#nodes">Nodes</a></li>
 <li><a href="#edges">Edges</a></li>
 </ul></li>
@@ -41,11 +44,11 @@ summary: "Network analysis has been recognized with increased frequency as a use
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>This data set was used in the article, Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom (Everton, Everton, Green, Homblin, Schroeder, 2019), and draws from J.K. Rowling’s seven Harry Potter books and other open-source data to code Dumbledore’s Army as a network. Consisting of 29 members, Dumbledore’s Army’s undirected network of 282 ties represent trust and mutual understanding by each individual, being coded by tie strength between members of each network on a scale from 0 to 5, where ‘0’ indicates the absence of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.</p>
+<p>This data set was used in the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom’ (Everton, Everton, Green, Homblin, Schroeder, 2019), and draws from J.K. Rowling’s seven Harry Potter books and other open-source data to code Dumbledore’s Army as a network. Consisting of 29 members, Dumbledore’s Army’s undirected network of 282 ties represent trust and mutual understanding by each individual, being coded by tie strength between members of each network on a scale from 0 to 5, where ‘0’ indicates the absence of a tie, ‘1’ for casual acquaintances, and ‘5’ for kin and close friendships.</p>
 </div>
 <div id="abstract" class="section level1">
 <h1>Abstract</h1>
-<p>Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power. As corresponding with this data set, Dumbledore’s Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort’s Death Eaters terrorizing the wizarding world. The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another. The authors analyzed Dumbledore’s Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way. The research concludes that Dumbledore’s Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort’s Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network.</p>
+<p>Network analysis has been recognized with increased frequency as a useful tool to understand narratives to identify key actors and events, highlighting semantic structures, and uncovering underlying concepts. In the article, ‘Strong Ties and Where to Find Them: Or, Why Neville (and Ginny and Seamus) and Bellatrix (and Lucius) Might Be More Important than Harry and Tom’ (Everton, Everton, Green, Homblin, Schroeder, 2019), examines the two “dark networks” in the story, Dumbledore’s Army and Voldemort’s Death Eaters struggling for power. As corresponding with this data set, Dumbledore’s Army is a resistance movement formed by students at Hogwarts School of Witchcraft and Wizardry in response to Voldemort’s Death Eaters terrorizing the wizarding world. The network is evaluated by identifying the relationships that are present- ranging from casual acquaintances to kin and close friends that would die for one another. The authors analyzed Dumbledore’s Army by using network topography and actor centrality metrics to understand the strengths and weaknesses of the network, and eventually comparing the results against Voldemort’s Death Eaters, who were examined in the same way. The research concludes that Dumbledore’s Army is built on trust and mutual understanding of their cause, which increases network resiliency and is far more cohesive when compared to Voldemort’s Death Eaters. While also highlighting the importance of less central secondary characters in the success of the group despite their role on the periphery of the network.</p>
 </div>
 <div id="code-book" class="section level1">
 <h1>Code Book</h1>
@@ -96,7 +99,7 @@ summary: "Network analysis has been recognized with increased frequency as a use
 <!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
 <!--   visNetwork::visExport(name = proto_net$reference$name) -->
 <!-- ``` -->
-<div id="htmlwidget-1" style="width:720px;height:864px;" class="widgetframe html-widget"></div>
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/harry_potter_dumbledores_army/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <p><br><br><br><br></p>
 </div>

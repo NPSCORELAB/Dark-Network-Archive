@@ -5,7 +5,7 @@
     <link>/tags/internal-structure/</link>
       <atom:link href="/tags/internal-structure/index.xml" rel="self" type="application/rss+xml" />
     <description>internal structure</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/avatar.png</url>
       <title>internal structure</title>
@@ -15,9 +15,10 @@
     <item>
       <title>Montreal Street Gangs Network</title>
       <link>/post/montreal_street_gangs/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/montreal_street_gangs/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
@@ -28,8 +29,10 @@
 &lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -40,11 +43,11 @@
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;This dataset examines social networks between early Anabaptist leaders. Together with the dataset on the beliefs of early Anabaptist leaders and groups, it can be used to examine the diffusion of theology and ideas among early Anabaptist leaders.&lt;/p&gt;
+&lt;p&gt;This data set consists of 35 nodes creating an undirected network of positive and negative relationships between gangs in Montreal. The file MONTREALGANG_ATTR describes each node’s name, class (organization), number of allegiances, ethnicity, territories, any allegiance to the American Crips or Bloods, gang ethnicity, and territory. Allegances are coded on a scale of 1-3; ‘1’ represents Bloods, ‘2’ represents Crips, and ‘3’ represnts Other. Ethnicities are coded on a scale of 1-5; ‘1’ represents Hispanic gangs, ‘2’ represents Afro-Canadian gangs, ‘3’ represents Caucasian gangs, ‘4’ represents Asian gangs, and ‘5’ represnts no ethnic association or mixed. Territories are coded on a scale of 1-3; ‘1’ represents Downtown, ‘2’ represnts East, and ‘3’ repreesnts West.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;Religiously motivated violence is and always will be a relevant topic. To address and effectively counter contemporary violent groups, it is important to investigate similar historic groups. This thesis attempts to answer the research question: ‘During the Radical Reformation, why did some Anabaptist groups accept the use of violence while others did not, and how did the movement evolve to pacifism?’ To answer this question, this study utilizes a mixed methodology of case study analysis and social network analysis of Anabaptist leaders during the 16th century. This thesis argues that violent ideology is largely a function of three factors: charismatic leadership, isolation, and apocalypticism. The interaction of these factors led to the emergence of Anabaptist groups that embraced the use of violence. However, groups’ internal characteristics can also lead them away from violence. In the case of the Anabaptists, social proximity assisted leaders with a counter-message to speak effectively to violent ultra-radical factions. The goal of this thesis is to identify characteristics of religious groups that may signal the potential for future violence, while also providing insight into which leaders may be capable of re-directing groups that have become violent.&lt;/p&gt;
+&lt;p&gt;In Montreal, the majority of street gangs fall into two larger coalitions: Les Bleus and Les Rouges- Canadian versions of the popular American Crips and Bloods, although police believe that this division was created through sensationalization of media outlets and a simplistic representation of the gangs. In fact, it is unclear if there is any connection at all between the Montreal gangs and their American namesake. Karine Descormiers and Carlo Morselli attempt to use network analysis in their article, ‘Alliances, Conflicts, and Contradictions in Montreal’s Street Gang Landscape,’ to understand the intergang relations in Montreal and their similarities to the traditional American Crips and Bloods Rivalry. Authors designed an analytical framework based on the perspectives of 20 young offenders in low security youth detention centers in Montreal to study the structure and framework of the gangs present in the city. Descormiers and Morselli used traditional topographical measures such as density and degree centrality to determine impact of observed positive and negative links within the network, furthermore how those interactions translate to violence within and outside of their consortiums. Gangs were determined to have similar structure regardless of their affiliation with Les Bleus and Les Rouges, but it is clear that relational structure between the gangs differs greatly across groups- with the presence of positive and negative relations being equally as prevalent. Alliance and rivalries are a defining characteristic of the gang networks in Montreal being explained by alliances between ethnic groups and economic similarities, with violence occurring significantly more frequently between outgroups.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Code Book&lt;/h1&gt;
@@ -95,7 +98,7 @@
 &lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
 &lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
 &lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:720px;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/montreal_street_gangs/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;

@@ -35,12 +35,11 @@ build_net <- function(edge_table, node_table,
   target_edges <- edge_table[
     edge_table$edge_class == edge_class, 
   ]
-  if (!nrow(target_edges)) {
-    stop("The `edge_class` in `proto_net$reference$codebook` doesn't have any rows.")
-  }
+  
   target_nodes <- node_table[
     node_table$name %in% c(target_edges$from, target_edges$to), 
   ]
+  
   igraph::graph_from_data_frame(
     d = target_edges,
     directed = directed,
@@ -112,7 +111,7 @@ knitr::kable(proto_net$reference$codebook)
 <!-- ``` -->
 
 
-```{r, out.width = '100%', fig.height = 9}
+```{r, out.width='100%', fig.height=9}
 build_vis_net <- function(g, title) {
   dat <- visNetwork::toVisNetworkData(g)
   
@@ -122,8 +121,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -136,7 +133,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -165,12 +163,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = FALSE, #TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = "100%"#, width = 700
-                         )
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

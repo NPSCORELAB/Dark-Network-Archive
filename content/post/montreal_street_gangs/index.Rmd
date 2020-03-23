@@ -8,7 +8,7 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: "[Researchgate](https://www.researchgate.net/publication/254098053_Alliances_Conflicts_and_Contradictions_in_Montreal%27s_Street_Gang_Landscape/figures?lo=1)"
   focal_point: ""
   preview_only: false
 tags: 
@@ -16,7 +16,7 @@ tags:
 - internal structure
 - alliances
 - conflicts
-summary: "Religiously motivated violence is and always will be a relevant topic. To address and effectively counter contemporary violent groups, it is important to investigate similar historic groups. This thesis attempts to answer the research question: 'During the Radical Reformation, why did some Anabaptist groups accept the use of violence while others did not, and how did the movement evolve to pacifism?' To answer this question, this study utilizes a mixed methodology of case study analysis and social network analysis of Anabaptist leaders during the 16th century. This thesis argues that violent ideology is largely a function of three factors: charismatic leadership, isolation, and apocalypticism. The interaction of these factors led to the emergence of Anabaptist groups that embraced the use of violence. However, groups' internal characteristics can also lead them away from violence. In the case of the Anabaptists, social proximity assisted leaders with a counter-message to speak effectively to violent ultra-radical factions. The goal of this thesis is to identify characteristics of religious groups that may signal the potential for future violence, while also providing insight into which leaders may be capable of re-directing groups that have become violent."
+summary: "In Montreal, the majority of street gangs fall into two larger coalitions: Les Bleus and Les Rouges- Canadian versions of the popular American Crips and Bloods, although police believe that this division was created through sensationalization of media outlets and a simplistic representation of the gangs.  In fact, it is unclear if there is any connection at all between the Montreal gangs and their American namesake.  Karine Descormiers and Carlo Morselli attempt to use network analysis in their article, 'Alliances, Conflicts, and Contradictions in Montreal’s Street Gang Landscape,' to understand the intergang relations in Montreal and their similarities to the traditional American Crips and Bloods Rivalry.  Authors designed an analytical framework based on the perspectives of 20 young offenders in low security youth detention centers in Montreal to study the structure and framework of the gangs present in the city.  Descormiers and Morselli used traditional topographical measures such as density and degree centrality to determine impact of observed positive and negative links within the network, furthermore how those interactions translate to violence within and outside of their consortiums.  Gangs were determined to have similar structure regardless of their affiliation with Les Bleus and Les Rouges, but it is clear that relational structure between the gangs differs greatly across groups- with the presence of positive and negative relations being equally as prevalent.  Alliance and rivalries are a defining characteristic of the gang networks in Montreal being explained by alliances between ethnic groups and economic similarities, with violence occurring significantly more frequently between outgroups.  "
 ---
 
 
@@ -124,8 +124,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -138,7 +136,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -167,11 +166,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

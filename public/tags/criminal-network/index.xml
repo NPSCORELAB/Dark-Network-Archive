@@ -5,7 +5,7 @@
     <link>/tags/criminal-network/</link>
       <atom:link href="/tags/criminal-network/index.xml" rel="self" type="application/rss+xml" />
     <description>criminal network</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/avatar.png</url>
       <title>criminal network</title>
@@ -15,9 +15,10 @@
     <item>
       <title>Project Ciel</title>
       <link>/post/ciel/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/ciel/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
@@ -28,8 +29,10 @@
 &lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -40,11 +43,11 @@
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;The Project Ciel data was reconstructed by the UCINET team from Carlo Morselli’s 2009 book Inside Criminal Networks. These data represent a small drug-importation network operating in Montreal from 1996 to 1997. The data was recorded as a weighted matrix (25x25) were ties are directed.&lt;/p&gt;
+&lt;p&gt;The Project Ciel data was reconstructed by the UCINET team from Carlo Morselli’s 2009 book ‘Inside Criminal Networks’. This data represents a small drug-importation network operating in Montreal from 1996 to 1997, with information having been collected through law enforcement electronic and physical surveillance records. Consisting of 25 nodes, the data is representing in a weighted matrix with directed ties.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;Project Ciel is based on a small drug-importation network that was importing liquid hashish from Jamaica to Montreal. This network was targeted by the Royal Canadian Mounted Police and the Montreal Police from May 1996 to June 1997. Typical of many Canadian investigations of drug smuggling and trafficking, the operations in Project Ciel were described as taking place within a tightly governed organizational framework—a hierarchy, in short. Reports from the investigation maintained that the main target of the investigation was the “organizational leader.” Other key targets included the leader’s “lieutenant” and a series of other subordinates. The investigation produced three separate seizures, with two taking place at Mirabel airport near Montreal and another occurring at Sangster airport in Jamaica. Overall, 75 people fell into the surveillance net. A selection process that was aimed at identifying only those individuals who were active in the drug-importation operations resulted in a final network of 25 participants.&lt;/p&gt;
+&lt;p&gt;Project Ciel is based on a small drug-importation network that was importing liquid hashish from Jamaica to Montreal. This network was targeted by the Royal Canadian Mounted Police and the Montreal Police from May 1996 to June 1997, with the main target of the investigation being the ‘organizational leader’. Other key targets include the leader’s ‘lieutenant’, and lower level mid-management individuals. The investigation produced three separate seizures, with two taking place at Mirabel airport near Montreal and another occurring at Sangster airport in Jamaica. Using law enforcement data, primarily collected through electronic and physical surveillance records, Carlo Morselli, author of the book Inside Criminal Networks, evaluated the network using popular centrality measures to identify and understand how this dark network was centered around key participants. The Ciel network was identified as being a tightly controlled organization with a relatively traditional hierarchy structure, with the ring leader distancing themself from the operation, delegating day-to-day operations to a ‘lieutenant’ who controlled lower level drug mules. Morselli primarily uses centralization and centrality measures (in particular, degree centrality and betweenness centrality) to explain the role of indirect and direct centrality to a network, and it’s correlation to operational vulnerability and the desire to mitigate risks within the organization even when not directly involved with the actions of subordinate members of the group.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Code Book&lt;/h1&gt;
@@ -95,7 +98,7 @@
 &lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
 &lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
 &lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:720px;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/ciel/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -112,6 +115,119 @@
 &lt;h3&gt;Edges&lt;/h3&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/ciel/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Morselli C (2009). &lt;em&gt;Inside Criminal Networks&lt;/em&gt;. Springer, New York.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Siren</title>
+      <link>/post/siren/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/siren/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Data on an undirected network of 44 criminals running an international stolen-vehicle exportation operation involving participants in Canada, Ghana, Russia, Egypt, Iraq, Italy, and Switzerland. Obtained within a larger investigative setting occuring in 1998. In total, 35 cars were retrived. The data was procured from the UCINET Software site and was reconstructed from Morselli’s book Inside Criminal Networks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;Morselli’s Project Siren data set encompasses actors embedded in an illicit network for the stolen-vehicle exportation (or ringing) operations. The data was obtained within a larger investigative setting between 1993 and 2005 under Project CERVO. As Morselli (2009) points out ’The main objective of this task force was to monitor and control the exportation of stolen luxury vehicles from the Port of Montreal. Shipments associated with Siren were tracked to Ghana, Russia, Egypt, Iraq, Italy, and Switzerland. In total, 35 cars were retrieved. Cooperation between law-enforcement and border/insurance agencies was the unique feature, with the latter supplying documents from maritime shipping companies that contained information on suspect cargo and the identities of individuals or enterprises involved in their transportation. The data presented here was reconstructed from Morselli’s book by researchers and maintainers of the UCINET Software site (&lt;a href=&#34;https://sites.google.com/site/ucinetsoftware&#34; class=&#34;uri&#34;&gt;https://sites.google.com/site/ucinetsoftware&lt;/a&gt;). However, the author provides an in detail description of his data collection process on his 2000 book Inside Criminal Networks. Morselli used degree centrality and betweenness centrality to determine brokerage qualifications in the Siren network when applied to ringing operations by examining the network by removing specific participants over different permutations. The ultimate goal was to find how broker extraction would disrupt the network and crime-commission process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;communication&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Undirected and binary ties refering to affiliaioin between gangs. These data have been reconstrustructed by members of the UCINET team from Karine Descomiers and Carlo Morselli’s 2011 article ‘Alliances, Conflicts and Contraditions in Montreal’s Street Gang Landscape’, which appeared on the International Criminal Justice Review.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -221,116 +337,6 @@
 &lt;h3&gt;Edges&lt;/h3&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/publication/ciel/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;Morselli C (2009). &lt;em&gt;Inside Criminal Networks&lt;/em&gt;. Springer, New York.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Project Siren</title>
-      <link>/post/siren/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/siren/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Data on a network of criminals running a stolen-vehicle exportation operation. Obtained within a larger investigatite setting. The data was procured from the UCINET Software site and was reconstructed from Morselli’s book Inside Criminal Networks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;Morselli’s Project Siren data set encompasses actors embedded in an illicit network for the stolen-vehicle exportation (or ringing) operations. The data was obtained within a larger investigative setting between 1993 and 2005 under Project CERVO. As Morselli (2009) points out ’The main objective of this task force was to monitor and control the exportation of stolen luxury vehicles from the Port of Montreal. Cooperation between law-enforcement and border/insurance agencies was the unique feature, with the latter supplying documents from maritime shipping companies that contained information on suspect cargo and the identities of individuals or enterprises involved in their trasportation. The data presented here was reconstructed from Morselli’s book by researchers and mainteners of the UCINET Software site (&lt;a href=&#34;https://sites.google.com/site/ucinetsoftware&#34; class=&#34;uri&#34;&gt;https://sites.google.com/site/ucinetsoftware&lt;/a&gt;). However, the author provides an in detail description of his data collection process on his 2000 book Inside Criminal Networks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;communication&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Undirected and binary ties refering to affiliaioin between gangs. These data have been reconstrustructed by members of the UCINET team from Karine Descomiers and Carlo Morselli’s 2011 article ‘Alliances, Conflicts and Contraditions in Montreal’s Street Gang Landscape’, which appeared on the International Criminal Justice Review.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:720px;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/siren/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

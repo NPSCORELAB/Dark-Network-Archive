@@ -5,7 +5,7 @@
     <link>/tags/suicide-bombings/</link>
       <atom:link href="/tags/suicide-bombings/index.xml" rel="self" type="application/rss+xml" />
     <description>suicide bombings</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/avatar.png</url>
       <title>suicide bombings</title>
@@ -15,9 +15,10 @@
     <item>
       <title>The Noordin Top Terrorist Network</title>
       <link>/post/noordin_139/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/noordin_139/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
@@ -28,8 +29,10 @@
 &lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -40,11 +43,11 @@
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were drawn primarily from ‘Terrorism in Indonesia: Noordin’s Networks,’ a publication of the International Crisis Group (2006) and include relational data on the 79 individuals listed in Appendix C of that publication.&lt;/p&gt;
+&lt;p&gt;These data were drawn primarily from ‘Terrorism in Indonesia: Noordin’s Networks,’ a publication of the International Crisis Group (2006) and include relational data on the 79 individuals listed in Appendix C of that publication. The data represents 288 individuals in the Noordin Top terrorist network, originally constructed by Naval Postgraduate School students as part of the course ‘Tracking and Disrupting Dark Networks’, and reviewed by CORE Lab Research Assistant Daniel Cunningham. The data represents information regarding the relationships between group members, where members had been educated, if members had been classmates, communication ties, kinship ties, training events that members had been a part of, business and finances that members had been involved in, operational ties, friendship ties, religious affiliation, if members had been soulmates, logistical locations, recorded meetings, and individual attributes (including leducation, nationality, previous military training, etc.).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;These data were drawn primarily from two International Crisis Group (ICG) reports: “Terrorism in Indonesia: Noordin’s Networks” (International Crisis Group, 2006) and “Indonesia: Noordin Top’s Support Base” (International Crisis Group, 2009). The two ICG reports on Noordin contain rich one- and two-mode data on a variety of relations and affiliations (friendship, kinship, meetings, etc.) along with significant attribute data (education, group membership, physical status, etc.). The data were initially structured and analyzed by Naval Postgraduate School students in the course “Tracking and Disrupting Dark Networks” under the direction of Professor Sean Everton, Co-Director of the CORE Lab and Professor Nancy Roberts and then expanded and cleaned by Associate Faculty for Instruction, Dan Cunningham.&lt;/p&gt;
+&lt;p&gt;Social network analysis can be used in a variety of ways to combat dark network, as used in ‘Strategies for Combating Dark Networks’ by Nancy Roberts and Sean Everton, kinetic and non-kinetic approaches can be used to disrupt and counter dark networks such as terrorist operations. Kinetic approaches involve ‘aggressive and offensive measures to eliminate or capture network members, and their supporters,’ (Roberts, Everton, 2012), while non-kinetic measures involve ‘the use of subtle, non-coercive means for combating dark networks,’. Roberst and Everton use network data from Noordin Top’s South East Asian terror network to demonstrate the effectiveness of both strategies. By using topographical social network analysis metrics, the authors discerned the ability to weaken a dark network through two kinetic strategies: targeting and capacity building, and four non-kinetic approaches: institution-building, psychological operations, information operations, and rehabilitation. Although distinct approaches, using all six approaches is recommended to create a well-rounded counter-approach to extremism, while also paying attention to the different levels of node analysis- at the individual and organization level.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Code Book&lt;/h1&gt;
@@ -199,7 +202,7 @@
 &lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
 &lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
 &lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:720px;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/noordin_139/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;

@@ -8,13 +8,13 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: ""
   focal_point: ""
   preview_only: false
 tags: 
 - gangs
 - criminal network
-summary: "Morselli's Project Siren data set encompasses actors embedded in an illicit network for the stolen-vehicle exportation (or ringing) operations. The data was obtained within a larger investigative setting between 1993 and 2005 under Project CERVO. As Morselli (2009) points out 'The main objective of this task force was to monitor and control the exportation of stolen luxury vehicles from the Port of Montreal. Cooperation between law-enforcement and border/insurance agencies was the unique feature, with the latter supplying documents from maritime shipping companies that contained information on suspect cargo and the identities of individuals or enterprises involved in their trasportation. The data presented here was reconstructed from Morselli's book by researchers and mainteners of the UCINET Software site (https://sites.google.com/site/ucinetsoftware). However, the author provides an in detail description of his data collection process on his 2000 book Inside Criminal Networks."
+summary: "Morselli's Project Siren data set encompasses actors embedded in an illicit network for the stolen-vehicle exportation (or ringing) operations. The data was obtained within a larger investigative setting between 1993 and 2005 under Project CERVO. As Morselli (2009) points out 'The main objective of this task force was to monitor and control the exportation of stolen luxury vehicles from the Port of Montreal. Shipments associated with Siren were tracked to Ghana, Russia, Egypt, Iraq, Italy, and Switzerland. In total, 35 cars were retrieved. Cooperation between law-enforcement and border/insurance agencies was the unique feature, with the latter supplying documents from maritime shipping companies that contained information on suspect cargo and the identities of individuals or enterprises involved in their transportation. The data presented here was reconstructed from Morselli's book by researchers and maintainers of the UCINET Software site (https://sites.google.com/site/ucinetsoftware). However, the author provides an in detail description of his data collection process on his 2000 book Inside Criminal Networks.  Morselli used degree centrality and betweenness centrality to determine brokerage qualifications in the Siren network when applied to ringing operations by examining the network by removing specific participants over different permutations.  The ultimate goal was to find how broker extraction would disrupt the network and crime-commission process."
 ---
 
 
@@ -122,8 +122,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -136,7 +134,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -165,11 +164,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

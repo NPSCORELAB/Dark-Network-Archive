@@ -1,6 +1,6 @@
 ---
 title: "Drugnet"
-publishDate: "2019-12-14"
+publishDate: "2020-03-22"
 output: 
   blogdown::html_page:
     toc: true
@@ -8,7 +8,7 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: ""
   focal_point: ""
   preview_only: false
 tags: 
@@ -17,9 +17,10 @@ tags:
 - African Americans
 - Puerto Ricans
 - HIV
-summary: "Social network research increasingly expands our understanding of the social environment of drug users' health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases. Our study of the networks of drug users who use high-risk sites, where people gather to inject drugs and smoke crack cocaine, is designed to explore the relationships and interactions of drug users in settings in which potential risk occurs, and to assess the opportunity to create prevention linkages. This paper describes the ego-network characteristics and macro-network linkages among a sample of 293 drug users recruited through street outreach and personal drug-use network referral in Hartford, Connecticut. Characteristics of the largest connected component of the network are also described and analyzed. We discuss uses of network analyses as well as implications of network connections for peer-led AIDS prevention intervention conducted in high-risk drug-use sites."
+summary: "The paper 'Social Networks of Drug Users in High-Risk Sites: Finding the Connections' (Weeks, Clair, Borgatti, Radda, Schenl, 2002) uses social network research to expand understanding of the social environment of drug users' health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases.  Researchers interviewed 293 drug users in the Hartford, Connecticut area from May 1998 to December 1999 to create ego-networks and macro-network linkages to determine the implications of network connections for peer-lead AIDs prevention intervention conducted in high-risk drug-use sites.  In particular by identifying existing channels for viral transfer, influence of peer norms and practices of risk-oriented behavior, and communication paths in which prevention methods can diffuse through exploring the relationships and interactions of drug users. In conclusion, the data was used to identify individuals in key locations of the largest connected network components as the most effective peer-educators due to their inherent centrality to the network.  While including strategic individuals within subgroups such as minority groups or women to effectively reach all areas of the network as peer-educators."
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
@@ -30,8 +31,10 @@ summary: "Social network research increasingly expands our understanding of the 
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#code-book">Code Book</a></li>
 <li><a href="#sociogram">Sociogram</a></li>
-<li><a href="#get-the-data">Get the Data</a><ul>
-<li><a href="#tables">Tables</a><ul>
+<li><a href="#get-the-data">Get the Data</a>
+<ul>
+<li><a href="#tables">Tables</a>
+<ul>
 <li><a href="#nodes">Nodes</a></li>
 <li><a href="#edges">Edges</a></li>
 </ul></li>
@@ -42,11 +45,11 @@ summary: "Social network research increasingly expands our understanding of the 
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>These data represent a network of drug users in Hartford. Ties are directed and represent acquaintanceship. The network is a result of two years of ethnographic observations of people’s drug habits.</p>
+<p>These data represent a network of drug users in Hartford. Ties are directed and represent acquaintanceship. The network is a result of two years of ethnographic observations of people’s drug habits. The dataset DRUGATTR includes information related to ethnicity and gender. Ethnicity is coded by ‘2’ for African American, ‘3’ for Puerto Rican/Latino, and the numbers ‘1,5,6,7’ representative of white or other. Gender is coded by ‘1’ for male, ‘2’ for female, and ‘0’ for unknown.</p>
 </div>
 <div id="abstract" class="section level1">
 <h1>Abstract</h1>
-<p>Social network research increasingly expands our understanding of the social environment of drug users’ health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases. Our study of the networks of drug users who use high-risk sites, where people gather to inject drugs and smoke crack cocaine, is designed to explore the relationships and interactions of drug users in settings in which potential risk occurs, and to assess the opportunity to create prevention linkages. This paper describes the ego-network characteristics and macro-network linkages among a sample of 293 drug users recruited through street outreach and personal drug-use network referral in Hartford, Connecticut. Characteristics of the largest connected component of the network are also described and analyzed. We discuss uses of network analyses as well as implications of network connections for peer-led AIDS prevention intervention conducted in high-risk drug-use sites.</p>
+<p>The paper ‘Social Networks of Drug Users in High-Risk Sites: Finding the Connections’ (Weeks, Clair, Borgatti, Radda, Schenl, 2002) uses social network research to expand understanding of the social environment of drug users’ health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases. Researchers interviewed 293 drug users in the Hartford, Connecticut area from May 1998 to December 1999 to create ego-networks and macro-network linkages to determine the implications of network connections for peer-lead AIDs prevention intervention conducted in high-risk drug-use sites. In particular by identifying existing channels for viral transfer, influence of peer norms and practices of risk-oriented behavior, and communication paths in which prevention methods can diffuse through exploring the relationships and interactions of drug users. In conclusion, the data was used to identify individuals in key locations of the largest connected network components as the most effective peer-educators due to their inherent centrality to the network. While including strategic individuals within subgroups such as minority groups or women to effectively reach all areas of the network as peer-educators.</p>
 </div>
 <div id="code-book" class="section level1">
 <h1>Code Book</h1>
@@ -97,7 +100,7 @@ summary: "Social network research increasingly expands our understanding of the 
 <!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %>%  -->
 <!--   visNetwork::visExport(name = proto_net$reference$name) -->
 <!-- ``` -->
-<div id="htmlwidget-1" style="width:720px;height:864px;" class="widgetframe html-widget"></div>
+<div id="htmlwidget-1" style="width:100%;height:864px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/drugnet/index_files/figure-html//widgets/widget_unnamed-chunk-5.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <p><br><br><br><br></p>
 </div>

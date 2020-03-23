@@ -5,7 +5,7 @@
     <link>/tags/terrorism/</link>
       <atom:link href="/tags/terrorism/index.xml" rel="self" type="application/rss+xml" />
     <description>terrorism</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/avatar.png</url>
       <title>terrorism</title>
@@ -15,11 +15,10 @@
     <item>
       <title>Australian Embassy Bombing 2004, Indonesia</title>
       <link>/post/australian_embassy_bombing_2004/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/australian_embassy_bombing_2004/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
@@ -137,7 +136,1027 @@
 &lt;/div&gt;
 &lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Australian Embassy Bombing 2004, Indonesia.” &amp;lt;URL:
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Australian Embassy Bombing 2004, Indonesia.”
+&amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed:
+2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bali bombings 2002, Indonesia</title>
+      <link>/post/bali_bombings_2002/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/bali_bombings_2002/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2002 Bali bombings in Bali, Indonesia. The undirected network is composed of 27 individuals and their evolving relationships and legal status over periods of time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006). As such, this series is useful for exploring compositional network changes in a terrorist network over time. Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties (as such these relationships are not included in the cleaned data), ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;These data depict the network of indiduals involved in the 2002 Bali bombings in the tourist district of Kuta on Bali, Indonesia. This incident claimed the lives of 202 people (including 88 Australians, 38 Indonesians, 23 Britons, and 20 more people of differing nationalities), and injuring 209 more individuals. The attack on October 12, 2002, has been attributed to Jemaah Islamiyah, a violent Islamist extremist group dedicated to the creation of an Islamic state in Southeast Asia that has links to Al-Qaeda. A suicide bomber detonated an explosive device inside of Paddy’s Pub, a local establishment popular with Australian and Western tourists, causing individuals to flee into the street where a second car bomb was detonated. A third device was detonated outside of the United States consulate in Denpasar, Bali, Indonesia, but was significantly smaller and caused minimal damage and no deaths. Motivation for the attack is believed to be in response to support for the United State’s War on Terror and Australia’s role in the liberation of East Timor. This was the first of a series of terrorist attacks committed by Jemaah Islamiyah targeting Australians and Westerners. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as dynamic and subject to changes over time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Bali bombings 2002, Indonesia.” &amp;lt;URL:
+&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bali bombings 2005, Indonesia</title>
+      <link>/post/bali_bombings_2005/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/bali_bombings_2005/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2005 Bali bombings in Bali, Indonesia. The undirected network is composed of 27 individuals and their evolving relationships and legal status over periods of time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006). As such, this series is useful for exploring compositional network changes in a terrorist network over time. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;This data depicts the network of indiduals involved in the 2005 Bali bombings in the Kuta tourist district of Bali, Indonesia. This incident was perpetrated by Jemaah Islamiyah and al-Qaeda and claimed the lives of 23 people- including the bombers, and injuring more than 100. The suicide bombings occured at the the Raja’s Resturant at the Kuta Square shopping mall in central Kuta, and another two bombs detonated along the Jimbaran beach, one of which was near the Four Seasons Hotel- a location popular with Western tourists. Three more undetonated bombs were found in Jimbaran. Of the 23 killed, 19 Australians, 8 South Koreans, 6 Americans, 4 Japanese, 3 Canadians, and 1 Briton were killed. Jemaah Islamiyah, a violent Islamic extremist group in Southeast Asia, has been attributed to the attacks. The group also has ties to Al-Qaeda. Motivations for the attack are suggested to be associated with start of Ramadan, the Muslim holy month, and the upcoming third anniversary of the 2002 Bali bombing. This is the third of a series of terrorist bombings targeting Australians and Westerners in Bali, Indonesia. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes over time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Bali bombings 2002, Indonesia.” &amp;lt;URL:
+&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Christmas Eve bombings 2000, Indonesia</title>
+      <link>/post/christmas_eve_bombings_2000/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/christmas_eve_bombings_2000/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;The present data depict the network of individuals involved in the 2000 Christmas Eve series of high-scale terrorist attack by Al Qaeda and Jemaah Islamiyah. This series of attacks ook plack accross various churches in Jakarta, claiming the lives of 18 people. The authors of these dataset, JJATT, gathered these data from using ‘open source’ information. The present dataset reflects a combination of familial, frienship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Christmas Eve bombings 2000, Indonesia.” &amp;lt;URL:
+&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Madrid Train Bombings 2004, Spain</title>
+      <link>/post/madrid_train_bombings_2004/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/madrid_train_bombings_2004/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The undirected network is composed of 55 individuals and their evolving relationships over time. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;This data depicts the network of indiduals involved in the 2004 Madrid train bomings in Madrid, Spain. This incident was perpetrated by al-Qaeda and claimed the lives of 193 people- including the bombers, and injuring more than 2,000. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Madrid Train Bombings 2004, Spain.” &amp;lt;URL:
+&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>November17</title>
+      <link>/post/november17/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/november17/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Using data observed from open source publications, the authors derived network data on the social network of the Greek terrorist group November17 (N17). The present data set represents a reconstruction of the data presented in the original paper, Inferring missing links in partially observed social network, put together by the UCINET team. The data refers to a specific temporal window which runs from 1975 to 2002, and represents 22 members N17 with data derived from open-source reporting. The data set codes relationships between 22 members of N17, each tie is coded as ‘1’. The data set includes three attributes of the 22 members of N17, which include: role, faction, and resources. Role is coded with ‘1’ denoting giving orders, and ‘2’ denoting a person who recieves orders. Both faction and resources are coded from 1 to 3. Attributes for factions are coded as: ‘1’ representing the 1st Generation Leadership Faction, ‘2’ representing the Koufontinas Faction, ‘3’ representing the Sardanopoulos Faction. Resources attributes are coded as: ‘1’ for controlling one resource, ‘2’ for controlling two resources, and ‘3’ for controlling three resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;Commonly when working with large social networks, data collection is limited by resources, time, and accessibility to the network leading connections to be missed. As demonstrated in the article, Inferring missing links in partially observed social networks authored by CJ Rhodes and P Jones, it is possible to infer social network topology following a limited observation of a large network, despite data collection constraints. Inferences can be made to determine where previously unconnected individuals are likely to fit, thereby attempting to predict network growth as new people are considered for inclusion. The structure of a covert network or one that is actively trying to remain undetected can be even more difficult to ascertain. However, as with the case of the 17 November Revolutionary Organization (N17), a militant Marxist urban guerrilla organization in Greece, it can be very useful to understand the likelihood that individuals are connected despite limited or no evidence of a link. The missing-links in the N17 network were reconstructed using a statistical procedure based on Bayes’ Theorem, using data derived from open-source reporting between 1975 to 2002, a time period in which the group was responsible for several violent acts such as assassinations, kidnappings, and symbolic attacks on government offices. The Bayesian approach used in this study determined the probability of an interaction between individuals based on a sample of their known relationships to other N17 associates when examined against their known relationships, role within the group, membership to factions, access to resources necessary to conduct group operations, and centrality (or importance) to the N17 network. The results of the statistical analysis captures a predictive estimate of the possibility of connections between individuals that were not initially detected during the initial network sampling. To increase confidence in the inference method, the study repeated the analysis on several other independent network samples drawn from the N17 data, ultimately exhibiting that there is a 50% probability that these predicted links are correct.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;connection&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Relations indicate that open source reporting has demonstrated some connection between the two individuals at some point in the past.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Rhodes C, Jones P (2009). “Inferring Missing Links in Partially
+Observed Social Networks.” &lt;em&gt;Journal of the Operational Research
+Society&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 1373-1383.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Southeast Asian Aggregate Attack Series 2005, Indonesia</title>
+      <link>/post/philippines_ambassador_residence_bombing_2000/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/philippines_ambassador_residence_bombing_2000/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data set represents the relationships between actors associated with Jemaah Islamiyah and involved in one or mulitiple terrorist incidents (e.g., Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005). This undirected data is composed of 108 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;This network depicts a the ties between individuals associated with Jemaah Islamiyah and involed in one of the following events: Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005. Jemaah Islamiyah (JI) is a militant extremist Islamist group that aims to establish an Islamic state in Southeast Asia that has ties to Al-Qaeda. JI has roots in Darul Islam, a radical Islamist/anti-colonialist movement in Indonesia in the 1940s. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Southeast Asian Aggregate Attack Series 2005,
+Indonesia.” &amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;.
+Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Southeast Asian Aggregate Attack Series 2005, Indonesia</title>
+      <link>/post/southeast_asian_aggregate_attack_series_2005/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/southeast_asian_aggregate_attack_series_2005/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data set represents the relationships between actors associated with Jemaah Islamiyah and involved in one or mulitiple terrorist incidents (e.g., Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005). This undirected data is composed of 108 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;This network depicts a the ties between individuals associated with Jemaah Islamiyah and involed in one of the following events: Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005. Jemaah Islamiyah (JI) is a militant extremist Islamist group that aims to establish an Islamic state in Southeast Asia that has ties to Al-Qaeda. JI has roots in Darul Islam, a radical Islamist/anti-colonialist movement in Indonesia in the 1940s. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Southeast Asian Aggregate Attack Series 2005,
+Indonesia.” &amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;.
+Accessed: 2019-11-11.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vivace Bombing Cell 2005, London</title>
+      <link>/post/vivace_bombing_cell_2005/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/vivace_bombing_cell_2005/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a network of individuals involved in the failed bombining attacks that paralyzed London’s mass transportation system on July 21, 2005. The dynamic network accounts for evolving relationships ammong individuals involved in this terrorist cell. This undirected network is composed of 5 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;The network data depict a group of individuals associated with four attempted bomb attacks on July 21, 2005 that paralyzed London’s mass transportation system- targeting Shepherd’s Bush, Warren Street, and Oval stations on the London Underground, and on the London Buses on route 26 in Bethnal Green on Hackney Road. Operation Vivace offers clear insight into the role of mosques in radicalization (Herrington, 2015). This failed incident resulted in the arrest and prosecution of the would be bombers, which yielded a great deal of information on the cell’s activities. The failed attacks have been claimed by a group Abu Hafs al-Masri Brigade, named after one of Osama bin Laden’s lieutenants who was killed in 2001- but the legitimacy of this is disputed. The authors of these dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code Book&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sociogram&lt;/h1&gt;
+&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
+&lt;!-- g %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
+&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
+&lt;!--   visNetwork::visNodes( --&gt;
+&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
+&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visOptions( --&gt;
+&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
+&lt;!--     # selectedBy = list( --&gt;
+&lt;!--     #   variable = &#34;group&#34;, --&gt;
+&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     # ), --&gt;
+&lt;!--     nodesIdSelection = list( --&gt;
+&lt;!--       enabled = TRUE, --&gt;
+&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
+&lt;!--     ) --&gt;
+&lt;!--   ) %&gt;%  --&gt;
+&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
+&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
+&lt;!-- ``` --&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get the Data&lt;/h1&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nodes&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Edges&lt;/h3&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Citation&lt;/h1&gt;
+&lt;p&gt;Database JJ&amp;amp;ATT (2009). “Vivace Bombing Cell 2005, London.” &amp;lt;URL:
 &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -276,137 +1295,6 @@
     
     <item>
       <title>Bali bombings 2002, Indonesia</title>
-      <link>/post/bali_bombings_2002/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/bali_bombings_2002/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2002 Bali bombings in Bali, Indonesia. The undirected network is composed of 27 individuals and their evolving relationships and legal status over periods of time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006). As such, this series is useful for exploring compositional network changes in a terrorist network over time. Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties (as such these relationships are not included in the cleaned data), ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;These data depict the network of indiduals involved in the 2002 Bali bombings in the tourist district of Kuta on Bali, Indonesia. This incident claimed the lives of 202 people (including 88 Australians, 38 Indonesians, 23 Britons, and 20 more people of differing nationalities), and injuring 209 more individuals. The attack on October 12, 2002, has been attributed to Jemaah Islamiyah, a violent Islamist extremist group dedicated to the creation of an Islamic state in Southeast Asia that has links to Al-Qaeda. A suicide bomber detonated an explosive device inside of Paddy’s Pub, a local establishment popular with Australian and Western tourists, causing individuals to flee into the street where a second car bomb was detonated. A third device was detonated outside of the United States consulate in Denpasar, Bali, Indonesia, but was significantly smaller and caused minimal damage and no deaths. Motivation for the attack is believed to be in response to support for the United State’s War on Terror and Australia’s role in the liberation of East Timor. This was the first of a series of terrorist attacks committed by Jemaah Islamiyah targeting Australians and Westerners. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as dynamic and subject to changes over time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Bali bombings 2002, Indonesia.” &amp;lt;URL:
-&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bali bombings 2002, Indonesia</title>
       <link>/publication/bali_bombings_2002/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/publication/bali_bombings_2002/</guid>
@@ -525,137 +1413,6 @@
 &lt;h3&gt;Edges&lt;/h3&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2002/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Bali bombings 2002, Indonesia.” &amp;lt;URL:
-&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bali bombings 2005, Indonesia</title>
-      <link>/post/bali_bombings_2005/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/bali_bombings_2005/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a time series of a network of individuals involved in the 2005 Bali bombings in Bali, Indonesia. The undirected network is composed of 27 individuals and their evolving relationships and legal status over periods of time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006). As such, this series is useful for exploring compositional network changes in a terrorist network over time. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;This data depicts the network of indiduals involved in the 2005 Bali bombings in the Kuta tourist district of Bali, Indonesia. This incident was perpetrated by Jemaah Islamiyah and al-Qaeda and claimed the lives of 23 people- including the bombers, and injuring more than 100. The suicide bombings occured at the the Raja’s Resturant at the Kuta Square shopping mall in central Kuta, and another two bombs detonated along the Jimbaran beach, one of which was near the Four Seasons Hotel- a location popular with Western tourists. Three more undetonated bombs were found in Jimbaran. Of the 23 killed, 19 Australians, 8 South Koreans, 6 Americans, 4 Japanese, 3 Canadians, and 1 Briton were killed. Jemaah Islamiyah, a violent Islamic extremist group in Southeast Asia, has been attributed to the attacks. The group also has ties to Al-Qaeda. Motivations for the attack are suggested to be associated with start of Ramadan, the Muslim holy month, and the upcoming third anniversary of the 2002 Bali bombing. This is the third of a series of terrorist bombings targeting Australians and Westerners in Bali, Indonesia. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes over time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/bali_bombings_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -800,137 +1557,6 @@
     
     <item>
       <title>Christmas Eve bombings 2000, Indonesia</title>
-      <link>/post/christmas_eve_bombings_2000/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/christmas_eve_bombings_2000/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;The present data depict the network of individuals involved in the 2000 Christmas Eve series of high-scale terrorist attack by Al Qaeda and Jemaah Islamiyah. This series of attacks ook plack accross various churches in Jakarta, claiming the lives of 18 people. The authors of these dataset, JJATT, gathered these data from using ‘open source’ information. The present dataset reflects a combination of familial, frienship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/christmas_eve_bombings_2000/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Christmas Eve bombings 2000, Indonesia.” &amp;lt;URL:
-&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Christmas Eve bombings 2000, Indonesia</title>
       <link>/publication/christmas_eve_bombings_2000/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/publication/christmas_eve_bombings_2000/</guid>
@@ -1055,137 +1681,6 @@
 &lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Citation&lt;/h1&gt;
 &lt;p&gt;(????). “Christmas Eve bombings 2000, Indonesia.” &amp;lt;URL:
-&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Madrid Train Bombings 2004, Spain</title>
-      <link>/post/madrid_train_bombings_2004/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/madrid_train_bombings_2004/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The undirected network is composed of 55 individuals and their evolving relationships over time. Relationships are coded into two two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known (as such these relationships are not included in the cleaned data), ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. The current and past legal status of each individual is reflected as: free, in custody, or dead, and any associated arrest dates, release dates, or death dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;This data depicts the network of indiduals involved in the 2004 Madrid train bomings in Madrid, Spain. This incident was perpetrated by al-Qaeda and claimed the lives of 193 people- including the bombers, and injuring more than 2,000. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/madrid_train_bombings_2004/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Madrid Train Bombings 2004, Spain.” &amp;lt;URL:
 &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1324,122 +1819,6 @@
     
     <item>
       <title>November17</title>
-      <link>/post/november17/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/november17/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Using data observed from open source publications, the authors derived network data on the social network of the Greek terrorist group November17 (N17). The present data set represents a reconstruction of the data presented in the original paper, Inferring missing links in partially observed social network, put together by the UCINET team. The data refers to a specific temporal window which runs from 1975 to 2002, and represents 22 members N17 with data derived from open-source reporting. The data set codes relationships between 22 members of N17, each tie is coded as ‘1’. The data set includes three attributes of the 22 members of N17, which include: role, faction, and resources. Role is coded with ‘1’ denoting giving orders, and ‘2’ denoting a person who recieves orders. Both faction and resources are coded from 1 to 3. Attributes for factions are coded as: ‘1’ representing the 1st Generation Leadership Faction, ‘2’ representing the Koufontinas Faction, ‘3’ representing the Sardanopoulos Faction. Resources attributes are coded as: ‘1’ for controlling one resource, ‘2’ for controlling two resources, and ‘3’ for controlling three resources.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;Commonly when working with large social networks, data collection is limited by resources, time, and accessibility to the network leading connections to be missed. As demonstrated in the article, Inferring missing links in partially observed social networks authored by CJ Rhodes and P Jones, it is possible to infer social network topology following a limited observation of a large network, despite data collection constraints. Inferences can be made to determine where previously unconnected individuals are likely to fit, thereby attempting to predict network growth as new people are considered for inclusion. The structure of a covert network or one that is actively trying to remain undetected can be even more difficult to ascertain. However, as with the case of the 17 November Revolutionary Organization (N17), a militant Marxist urban guerrilla organization in Greece, it can be very useful to understand the likelihood that individuals are connected despite limited or no evidence of a link. The missing-links in the N17 network were reconstructed using a statistical procedure based on Bayes’ Theorem, using data derived from open-source reporting between 1975 to 2002, a time period in which the group was responsible for several violent acts such as assassinations, kidnappings, and symbolic attacks on government offices. The Bayesian approach used in this study determined the probability of an interaction between individuals based on a sample of their known relationships to other N17 associates when examined against their known relationships, role within the group, membership to factions, access to resources necessary to conduct group operations, and centrality (or importance) to the N17 network. The results of the statistical analysis captures a predictive estimate of the possibility of connections between individuals that were not initially detected during the initial network sampling. To increase confidence in the inference method, the study repeated the analysis on several other independent network samples drawn from the N17 data, ultimately exhibiting that there is a 50% probability that these predicted links are correct.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;connection&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Relations indicate that open source reporting has demonstrated some connection between the two individuals at some point in the past.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/november17/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;Rhodes C, Jones P (2009). “Inferring Missing Links in Partially
-Observed Social Networks.” &lt;em&gt;Journal of the Operational Research
-Society&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 1373-1383.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>November17</title>
       <link>/publication/november17/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/publication/november17/</guid>
@@ -1550,270 +1929,6 @@ Society&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 1373-1383.&lt;/p&gt;
 &lt;p&gt;Rhodes C, Jones P (2009). “Inferring Missing Links in Partially
 Observed Social Networks.” &lt;em&gt;Journal of the Operational Research
 Society&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 1373-1383.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Southeast Asian Aggregate Attack Series 2005, Indonesia</title>
-      <link>/post/philippines_ambassador_residence_bombing_2000/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/philippines_ambassador_residence_bombing_2000/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data set represents the relationships between actors associated with Jemaah Islamiyah and involved in one or mulitiple terrorist incidents (e.g., Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005). This undirected data is composed of 108 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;This network depicts a the ties between individuals associated with Jemaah Islamiyah and involed in one of the following events: Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005. Jemaah Islamiyah (JI) is a militant extremist Islamist group that aims to establish an Islamic state in Southeast Asia that has ties to Al-Qaeda. JI has roots in Darul Islam, a radical Islamist/anti-colonialist movement in Indonesia in the 1940s. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/philippines_ambassador_residence_bombing_2000/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Southeast Asian Aggregate Attack Series 2005, Indonesia.”
-&amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed:
-2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Southeast Asian Aggregate Attack Series 2005, Indonesia</title>
-      <link>/post/southeast_asian_aggregate_attack_series_2005/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/southeast_asian_aggregate_attack_series_2005/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;These data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data set represents the relationships between actors associated with Jemaah Islamiyah and involved in one or mulitiple terrorist incidents (e.g., Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005). This undirected data is composed of 108 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;This network depicts a the ties between individuals associated with Jemaah Islamiyah and involed in one of the following events: Christmas Eve bombings in 2000, Philippines Ambassador Residence bombing in 2000, Bali bombings in 2002, Australian Embassy bombing in 2005, and Bali bombing in 2005. Jemaah Islamiyah (JI) is a militant extremist Islamist group that aims to establish an Islamic state in Southeast Asia that has ties to Al-Qaeda. JI has roots in Darul Islam, a radical Islamist/anti-colonialist movement in Indonesia in the 1940s. The authors of this dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant familiy ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Acquaintances/Distant family ties (interactions limited to radical organization activities)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/southeast_asian_aggregate_attack_series_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Southeast Asian Aggregate Attack Series 2005, Indonesia.”
-&amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed:
-2019-11-11.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2078,129 +2193,6 @@ Society&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 1373-1383.&lt;/p&gt;
 &lt;p&gt;(????). “Southeast Asian Aggregate Attack Series 2005, Indonesia.”
 &amp;lt;URL: &lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed:
 2019-11-11.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Vivace Bombing Cell 2005, London</title>
-      <link>/post/vivace_bombing_cell_2005/</link>
-      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/vivace_bombing_cell_2005/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/elevate-section-attrs/elevate-section-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#code-book&#34;&gt;Code Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sociogram&#34;&gt;Sociogram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-data&#34;&gt;Get the Data&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tables&#34;&gt;Tables&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nodes&#34;&gt;Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#edges&#34;&gt;Edges&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;This data were made available through the John Jay &amp;amp; ARTIS Transnational Terrorism Database (JJATT), which hosts a collection network datasets pertaining to radical Islamists and their associates who have directly contributed to a terrorist attack. The present data depict a network of individuals involved in the failed bombining attacks that paralyzed London’s mass transportation system on July 21, 2005. The dynamic network accounts for evolving relationships ammong individuals involved in this terrorist cell. This undirected network is composed of 5 individuals and their relationships, involvement in one or more terrorist incidents, and legal status over time (1985-1989, 1990-1994, 1995-1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007). Relationships are coded into two categories: general relationships and kinship. General relationships are coded on a scale of 0-3; ‘0’ represents no relationship known, ‘1’ represents acquaintanceship or distant family ties, ‘2’ represents friendship or moderately close family ties, ‘3’ represents close friends or family. Coding of kinship is represented on a scale of 0-7; ‘0’ represents no kinship, ‘1’ represents in-laws, ‘2’ represents cousins, ‘3’ represents siblings, ‘4’ represents parent/child relationships, ‘5’ represents marriage, ‘6’ represents a grandparent/child relationship, and ‘7’ represents the relationship between significant others that are not married.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;abstract&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Abstract&lt;/h1&gt;
-&lt;p&gt;The network data depict a group of individuals associated with four attempted bomb attacks on July 21, 2005 that paralyzed London’s mass transportation system- targeting Shepherd’s Bush, Warren Street, and Oval stations on the London Underground, and on the London Buses on route 26 in Bethnal Green on Hackney Road. Operation Vivace offers clear insight into the role of mosques in radicalization (Herrington, 2015). This failed incident resulted in the arrest and prosecution of the would be bombers, which yielded a great deal of information on the cell’s activities. The failed attacks have been claimed by a group Abu Hafs al-Masri Brigade, named after one of Osama bin Laden’s lieutenants who was killed in 2001- but the legitimacy of this is disputed. The authors of these dataset, JJATT, gathered this data from using ‘open source’ information. The present dataset reflects a combination of familial, friendship, and association relationships. Furthermore, as a dynamic dataset these relationships are depicted as dynamic and subject to changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;code-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code Book&lt;/h1&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;edge_class&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_bimodal&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_directed&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_dynamic&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;is_weighted&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;definition&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Friends/Moderately close family ties (interactions extend beyond radical organizations to include such categories as co-workers and roommates). Operational/Organizational leadership (i.e. JI leadership, formally or informally “ranking” members of burgeoning cells). Operational Ties (i.e. worked closely on a bombing together).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Close Friends/Family, Tight-knit operational cliques (would die for each other&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sociogram&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sociogram&lt;/h1&gt;
-&lt;!-- ```{r, out.width=&#39;100%&#39;, fig.height=9} --&gt;
-&lt;!-- g %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraph() %&gt;%  --&gt;
-&lt;!--   visNetwork::visIgraphLayout(layout = &#34;layout_with_kk&#34;, randomSeed = 831) %&gt;%  --&gt;
-&lt;!--   visNetwork::visNodes( --&gt;
-&lt;!--     color = list(highlight.border = &#34;black&#34;),  --&gt;
-&lt;!--     shadow = list(enabled = TRUE, size = 5) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visOptions( --&gt;
-&lt;!--     highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), --&gt;
-&lt;!--     # selectedBy = list( --&gt;
-&lt;!--     #   variable = &#34;group&#34;, --&gt;
-&lt;!--     #   style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     # ), --&gt;
-&lt;!--     nodesIdSelection = list( --&gt;
-&lt;!--       enabled = TRUE, --&gt;
-&lt;!--       style = &#34;font-size: 15px&#34; --&gt;
-&lt;!--     ) --&gt;
-&lt;!--   ) %&gt;%  --&gt;
-&lt;!--   visNetwork::visInteraction(navigationButtons = TRUE, keyboard = TRUE) %&gt;%  --&gt;
-&lt;!--   visNetwork::visExport(name = proto_net$reference$name) --&gt;
-&lt;!-- ``` --&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:864px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-5.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get the Data&lt;/h1&gt;
-&lt;div id=&#34;tables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tables&lt;/h2&gt;
-&lt;div id=&#34;nodes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nodes&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;edges&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Edges&lt;/h3&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/vivace_bombing_cell_2005/index_files/figure-html//widgets/widget_unnamed-chunk-7.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;citation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Citation&lt;/h1&gt;
-&lt;p&gt;(????). “Vivace Bombing Cell 2005, London.” &amp;lt;URL:
-&lt;a href=&#34;http://doitapps.jjay.cuny.edu/jjatt/data.php&#34; class=&#34;uri&#34;&gt;http://doitapps.jjay.cuny.edu/jjatt/data.php&lt;/a&gt;&amp;gt;. Accessed: 2019-11-11.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

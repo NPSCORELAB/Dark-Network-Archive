@@ -8,7 +8,7 @@ featured: true
 editor_options: 
   chunk_output_type: console
 image:
-  caption: 'Image credit: [**Wikimedia Commons**](https://commons.wikimedia.org/wiki/File:Captured_Citizens_Brought_Before_an_Anabaptist_Leader.jpg)'
+  caption: ""
   focal_point: ""
   preview_only: false
 tags: 
@@ -17,7 +17,7 @@ tags:
 - African Americans
 - Puerto Ricans
 - HIV
-summary: "Social network research increasingly expands our understanding of the social environment of drug users' health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases. Our study of the networks of drug users who use high-risk sites, where people gather to inject drugs and smoke crack cocaine, is designed to explore the relationships and interactions of drug users in settings in which potential risk occurs, and to assess the opportunity to create prevention linkages. This paper describes the ego-network characteristics and macro-network linkages among a sample of 293 drug users recruited through street outreach and personal drug-use network referral in Hartford, Connecticut. Characteristics of the largest connected component of the network are also described and analyzed. We discuss uses of network analyses as well as implications of network connections for peer-led AIDS prevention intervention conducted in high-risk drug-use sites."
+summary: "The paper 'Social Networks of Drug Users in High-Risk Sites: Finding the Connections' (Weeks, Clair, Borgatti, Radda, Schenl, 2002) uses social network research to expand understanding of the social environment of drug users' health risks, particularly those associated with the transmission of HIV, hepatitis, and other sexually transmitted and bloodborne infectious diseases.  Researchers interviewed 293 drug users in the Hartford, Connecticut area from May 1998 to December 1999 to create ego-networks and macro-network linkages to determine the implications of network connections for peer-lead AIDs prevention intervention conducted in high-risk drug-use sites.  In particular by identifying existing channels for viral transfer, influence of peer norms and practices of risk-oriented behavior, and communication paths in which prevention methods can diffuse through exploring the relationships and interactions of drug users. In conclusion, the data was used to identify individuals in key locations of the largest connected network components as the most effective peer-educators due to their inherent centrality to the network.  While including strategic individuals within subgroups such as minority groups or women to effectively reach all areas of the network as peer-educators."
 ---
 
 
@@ -125,8 +125,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -139,7 +137,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -168,11 +167,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = 720)
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 

@@ -13,7 +13,7 @@ image:
   preview_only: false
 tags: 
 - terrorism
-summary: "These data depict the network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This incident was perpetrated by Jemaah Islamiyah, a terrorist organization linked to the 2002 Bali bombing, and claimed the lives of 9 people while injuring 150 others. The authors of these dataset, JJATT, gathered these data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as subject to changes over time. The terrorist group, Jemaah Islamiyah, is a Southeast Asian militant extremist Islamist rebel group with ties to Al-Qaeda, that has committed numerous violent acts dedicated to the creation of an Islamic state in Southeast Asia.  The group has cells in Indonesia, Singapore, Malaysia, and the Philippines, but remains particularly active in Indonesia where they maintain a public website.  The September 9th, 2004 suicide bombing of the Australian embassy resulted in the deaths of 9 individuals, with all Australians being reported alive.  Motivations for the September 9th, 2004 bombing of the Australian embassy are unclear, but possibly linked to the upcoming Indonesian presidential elections and/or the upcoming Australian elections, or the desired release of Abu Bakar Bashir, the spiritual leader of Jemaah Islamiyah. This was the third major attack targeting Australians in Indonesia, following the 2002 Bali bombing and 2003 Marriott Hotel bombing in Jakarta- both of which Jemaah Islamiyah has been suspected of orchestrating. "
+summary: "These data depict the network of individuals involved in the 2004 Australian Embassy Bombing in Jakarta, Indonesia. This incident was perpetrated by Jemaah Islamiyah, a terrorist organization linked to the 2002 Bali bombing, and claimed the lives of 9 people while injuring 150 others. The authors of these dataset, JJATT, gathered these data from using 'open source' information. The present dataset reflects a combination of familial, friendship, and association relationships. As a dynamic dataset these relationships are depicted as subject to changes over time. The terrorist group, Jemaah Islamiyah, is a Southeast Asian militant extremist Islamist rebel group with ties to Al-Qaeda, that has committed numerous violent acts dedicated to the creation of an Islamic state in Southeast Asia.  The group has cells in Indonesia, Singapore, Malaysia, and the Philippines, but remains particularly active in Indonesia where they maintain a public website.  The September 9th, 2004 suicide bombing of the Australian embassy resulted in the deaths of 9 individuals, with all Australians being reported alive.  Motivations for the September 9th, 2004 bombing of the Australian embassy are unclear, but possibly linked to the upcoming Indonesian presidential elections and/or the upcoming Australian elections, or the desired release of Abu Bakar Bashir, the spiritual leader of Jemaah Islamiyah. This was the third major attack targeting Australians in Indonesia, following the 2002 Bali bombing and 2003 Marriott Hotel bombing in Jakarta- both of which Jemaah Islamiyah has been suspected of orchestrating."
 ---
 
 
@@ -35,12 +35,11 @@ build_net <- function(edge_table, node_table,
   target_edges <- edge_table[
     edge_table$edge_class == edge_class, 
   ]
-  if (!nrow(target_edges)) {
-    stop("The `edge_class` in `proto_net$reference$codebook` doesn't have any rows.")
-  }
+  
   target_nodes <- node_table[
     node_table$name %in% c(target_edges$from, target_edges$to), 
   ]
+  
   igraph::graph_from_data_frame(
     d = target_edges,
     directed = directed,
@@ -112,7 +111,7 @@ knitr::kable(proto_net$reference$codebook)
 <!-- ``` -->
 
 
-```{r, out.width = '100%', fig.height = 9}
+```{r, out.width='100%', fig.height=9}
 build_vis_net <- function(g, title) {
   dat <- visNetwork::toVisNetworkData(g)
   
@@ -122,8 +121,6 @@ build_vis_net <- function(g, title) {
                          width = 680) %>% 
     visNetwork::visIgraphLayout(layout = "layout_with_kk",
                                 randomSeed = 831) %>% 
-    # visNetwork::visIgraphLayout(layout = "layout.norm",
-                                # layoutMatrix = coords) %>% 
     visNetwork::visNodes(
       color = list(highlight.border = "black"),
       shadow = list(enabled = TRUE, size = 5)
@@ -136,7 +133,8 @@ build_vis_net <- function(g, title) {
         enabled = TRUE,
         style = "font-size: 15px"
       )
-    )
+    ) %>% 
+    visNetwork::visInteraction(navigationButtons = TRUE)
 }
 
 
@@ -165,12 +163,11 @@ for_slick <- purrr::map_chr(vis_paths, readr::read_file)
 unlink(temp_dir, force = TRUE)
 
 slick <- slickR::slickR(for_slick, slideType = "iframe",
-       height = 900, width = 720) +
-  slickR::settings(dots = TRUE, autoplay = FALSE, #TRUE,
+       height = 900, width = "100%") +
+  slickR::settings(dots = TRUE, autoplay = FALSE,
                    lazyLoad = "ondemand")
 
-widgetframe::frameWidget(slick, width = "100%"#, width = 700
-                         )
+widgetframe::frameWidget(slick, width = "100%")
 ```
 
 
